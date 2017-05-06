@@ -148,10 +148,10 @@ public class BracketBuilder : MonoBehaviour
 
                     line = line.Trim();
 
-                    string RankTd = "<td height=20 class=xl6511405 style='height:15.0pt'>";
+                    string RankTd = "<td height=19 class=xl6322297 style='height:14.5pt'>";
 
-                    string NameClass = "xl1511405";
-                    string PointsClass = "xl6511405";
+                    string NameClass = "xl1522297";
+                    string PointsClass = "xl6322297";
 
                     // New Kolja parsing
                     if (line.StartsWith(RankTd))
