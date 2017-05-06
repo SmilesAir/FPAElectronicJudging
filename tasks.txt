@@ -1,0 +1,49 @@
+Overlay:
+Lower 3rd. Event, Round, Names (Rank). Just give data
+
+
+
+
+2017
+When starting, send the start time
+- Use NTP to sync time
+
+
+
+
+
+2016
+
+control to change bg color for overlay
+	read from text file
+
+check CurPool being used in AllData lookup in judgers when they send data
+header button OnClick events need to be registered at startup.  Or remove them from editor hooks
+
+change bg or something when in editing mode on judgers
+
+Make ready flow more reliable.
+- Judges can ready for the next team while other judges are still entering results for previous teams.
+- Ready buttons can be cleared if pressed too early
+- Perhaps show "Waiting for Judges" instead of ready button
+- Make UnReady button for Judgers
+- Make UnReady button for Head Judge
+
+Backup system detect the most complete results.
+- Instead of saving last 50 results, save the most recent and the most finished of each team's results
+
+Warning for incomplete results when moving to next team.
+- Like missing results from a judge not sending properly, or 0 score.
+
+Head judgers lock judges needs to always work
+- If head judger locks before all judges are ready, those judges won't start
+
+Discard Edit Teams changes button
+
+Be able to change scores from the Edit Teams Menu
+- Perhaps put the NumberScrolls over the top of the Header.
+
+Edit Teams show rank #
+Edit Teams scores are aligned for easy comparison.
+
+
