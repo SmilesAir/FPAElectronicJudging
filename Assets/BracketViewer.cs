@@ -466,7 +466,7 @@ public class BracketViewer : MonoBehaviour
 
 	void WriteExcelRoundXml(string ExportPath, PoolData pd, int PoolIndex)
 	{
-		StreamWriter stream = new StreamWriter(ExportPath + Path.DirectorySeparatorChar + pd.PoolName + ".xml");
+		StreamWriter stream = new StreamWriter(ExportPath + Path.DirectorySeparatorChar + "ExportData.xml");
 		XmlWriterSettings settings = new XmlWriterSettings();
 		settings.Indent = true;
 		settings.IndentChars = ("\t");
@@ -516,18 +516,35 @@ public class BracketViewer : MonoBehaviour
 			List<PoolData> Pools = Global.AllData.AllDivisions[CurDivIndex].Rounds[CurRoundIndex].Pools;
 			for (int PoolIndex = 0; PoolIndex < Pools.Count; ++PoolIndex)
 			{
-				string EJudgeDataPath = Environment.CurrentDirectory + "/EJudgeDataExports";
-				string ExportPath = "/" + ((EDivision)CurDivIndex).ToString() + "/" + ((ERound)CurRoundIndex).ToString() + (Pools.Count > 1 ? "/" + Pools[PoolIndex].PoolName : "");
-				ExportPath += Path.DirectorySeparatorChar + "EJudgingData";
-				string FullExportPath = EJudgeDataPath + ExportPath;
-
-				FullExportPath = FullExportPath.Replace('/', Path.DirectorySeparatorChar);
-				if (!Directory.Exists(FullExportPath))
+				try
 				{
-					Directory.CreateDirectory(FullExportPath);
-				}
+					string EJudgeDataPath = Environment.CurrentDirectory + "/EJudgeDataExports";
+					string PoolName = (Pools.Count > 1 ? "/" + Pools[PoolIndex].PoolName : "");
+					string ExportPath = "/" + ((EDivision)CurDivIndex).ToString() + "/" + ((ERound)CurRoundIndex).ToString() + PoolName;
+					string FullExportPath = EJudgeDataPath + ExportPath;
 
-				WriteExcelRoundXml(FullExportPath, Pools[PoolIndex], PoolIndex);
+					FullExportPath = FullExportPath.Replace('/', Path.DirectorySeparatorChar);
+					if (Directory.Exists(FullExportPath))
+					{
+						UnityEditor.FileUtil.DeleteFileOrDirectory(FullExportPath);
+					}
+
+					Directory.CreateDirectory(FullExportPath);
+
+					WriteExcelRoundXml(FullExportPath, Pools[PoolIndex], PoolIndex);
+
+					string ScoreSheetTemplate = Environment.CurrentDirectory + Path.DirectorySeparatorChar + "SpreadSheets" +
+						Path.DirectorySeparatorChar + "AutoImportScoresheets.xlsm";
+					string ScoreSheetTarget = FullExportPath + Path.DirectorySeparatorChar +
+						((EDivision)CurDivIndex).ToString() + "-" +
+						((ERound)CurRoundIndex).ToString() + "-" + (Pools.Count > 1 ? Pools[PoolIndex].PoolName : "") + ".xlsm";
+					ScoreSheetTemplate = ScoreSheetTemplate.Replace('/', Path.DirectorySeparatorChar);
+					ScoreSheetTarget = ScoreSheetTarget.Replace('/', Path.DirectorySeparatorChar);
+					File.Copy(ScoreSheetTemplate, ScoreSheetTarget);
+
+					Process.Start(ExcelPath, ScoreSheetTarget);
+				}
+				catch { }
 			}
 		}
 	}
