@@ -76,6 +76,7 @@ public class DifficultyJudger : JudgerBase
 			if (RecordScoreIndex != JustFinishedIndex)
 			{
 				GetComponent<AudioSource>().clip = MarkAudioClips[JustFinishedIndex];
+				Debug.Log("VOluem: " + GetComponent<AudioSource>().volume);
 				GetComponent<AudioSource>().Play();
 			}
 

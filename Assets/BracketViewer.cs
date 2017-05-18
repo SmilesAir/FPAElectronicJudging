@@ -526,7 +526,12 @@ public class BracketViewer : MonoBehaviour
 					FullExportPath = FullExportPath.Replace('/', Path.DirectorySeparatorChar);
 					if (Directory.Exists(FullExportPath))
 					{
-						UnityEditor.FileUtil.DeleteFileOrDirectory(FullExportPath);
+						foreach (string file in Directory.GetFiles(FullExportPath))
+						{
+							File.Delete(file);
+						}
+
+						Directory.Delete(FullExportPath);
 					}
 
 					Directory.CreateDirectory(FullExportPath);
