@@ -638,8 +638,10 @@ public class HeadJudger : MonoBehaviour
 		Vector2 TimeDateSize = InfoStyle.CalcSize(TimeDate);
 		GUI.Label(new Rect(20, InfoY, TimeDateSize.x, TimeDateSize.y), TimeDate, InfoStyle);
 
-		if (Global.AllData.AllDivisions.Length > (int)CurDivision &&
-			Global.AllData.AllDivisions[(int)CurDivision].Rounds.Length > (int)CurRound)
+		bool bValidDivisionRoundSettings = Global.AllData.AllDivisions.Length > (int)CurDivision &&
+			Global.AllData.AllDivisions[(int)CurDivision].Rounds.Length > (int)CurRound;
+
+		if (bValidDivisionRoundSettings)
 		{
 			RoundData Round = Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound];
 			int TotalSeconds = bJudging ? (int)(DateTime.Now - RoutineStartTime).TotalSeconds : 0;
@@ -679,7 +681,7 @@ public class HeadJudger : MonoBehaviour
 		}
 
 		#region Teams
-		if (!DivisionCombo.IsPicking && !RoundCombo.IsPicking)
+		if (!DivisionCombo.IsPicking && !RoundCombo.IsPicking && bValidDivisionRoundSettings)
 		{
 			Rect LeftRect = new Rect(20, Screen.height * .22f, Screen.width / 2 - 40, Screen.height * .5f);
 			if (CurPool == -1 && !bFestivalJudging)

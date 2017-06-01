@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.Text;
+using UnityEngine.Networking;
 
 public class Overlay : InterfaceBase
 {
@@ -354,5 +356,35 @@ public class Overlay : InterfaceBase
                 DrawScoreboardOverlay();
                 break;
         }
+	}
+
+	void TestRestApi()
+	{
+		TestJsonObj testObj = new TestJsonObj();
+		JsonUtility.ToJson(testObj);
+	}
+
+	UnityWebRequest CreateUnityWebRequest(string url, string param)
+	{
+		UnityWebRequest requestU = new UnityWebRequest(url, UnityWebRequest.kHttpVerbPOST);
+		byte[] bytes = GetBytes(param);
+		UploadHandlerRaw uH = new UploadHandlerRaw(bytes);
+		uH.contentType = "application/json";
+		requestU.uploadHandler = uH;
+		//CastleDownloadHandler dH = new CastleDownloadHandler();
+		//requestU.downloadHandler = dH; //need a download handler so that I can read response data
+		return requestU;
+	}
+
+	protected static byte[] GetBytes(string str)
+	{
+		byte[] bytes = Encoding.UTF8.GetBytes(str);
+		return bytes;
+	}
+
+	[Serializable]
+	public class TestJsonObj
+	{
+		public string Name = "test";
 	}
 }
