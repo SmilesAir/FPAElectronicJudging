@@ -144,7 +144,7 @@ public class Global : MonoBehaviour
 				ActiveInterface = EInterface.AIJudger;
 			if (GUILayout.Button("Exe Judger", GUILayout.Height(Screen.height - 60)))
 				ActiveInterface = EInterface.ExeJudger;
-			if (GUILayout.Button("All Interfaces", GUILayout.Height(Screen.height - 60)))
+			if (GUILayout.Button("All Interfaces (Head Judge)", GUILayout.Height(Screen.height - 60)))
 				bDrawAllInterfaceButtons = true;
 
 
