@@ -332,6 +332,14 @@ public enum ERound
 	Prelims
 }
 
+public enum EPool
+{
+	A,
+	B,
+	C,
+	D
+}
+
 public class RoutineScoreData
 {
 	public EDivision Division;

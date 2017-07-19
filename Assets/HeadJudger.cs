@@ -5,6 +5,7 @@ using System.Net;
 using System.Text;
 using System;
 using System.Collections.Generic;
+using UnityEngine.Networking;
 
 public class HeadJudger : MonoBehaviour
 {
@@ -508,6 +509,10 @@ public class HeadJudger : MonoBehaviour
 				Global.NetObj.LockJudgesToJudge();
 				bLockedForJudging = true;
                 bJudging = false;
+
+				// Send ready to livestream
+				TeamData readyTeam = Global.GetTeamData(CurDivision, CurRound, CurPool, CurTeam);
+				SendRestMessageAsync(readyTeam);
 			}
 		}
 		else
@@ -811,7 +816,7 @@ public class HeadJudger : MonoBehaviour
 				Vector2 BackSize = BackStyle.CalcSize(BackContent);
 				if (GUILayout.Button(BackContent, BackStyle, GUILayout.Width(LeftRectWidth), GUILayout.Height(BackSize.y)))
 				{
-                    SetCurrentPool(-1);
+					SetCurrentPool(-1);
 					CurTeam = -1;
 					bFestivalJudging = false;
 				}
@@ -979,6 +984,222 @@ public class HeadJudger : MonoBehaviour
 				}
 			}
 		}
+	}
+
+	void TestRestApi()
+	{
+		LiveStream.Player playerA = new LiveStream.Player();
+		playerA.Name = "Ryan";
+		LiveStream.Player playerB = new LiveStream.Player();
+		playerB.Name = "James";
+		LiveStream.Player playerC = new LiveStream.Player();
+		playerC.Name = "Jake";
+		LiveStream.Player playerD = new LiveStream.Player();
+		playerD.Name = "Randy";
+
+		LiveStream.Team teamA = new LiveStream.Team();
+		teamA.State = LiveStream.TeamStates.JudgesReady;
+		teamA.Players.Add(playerA);
+		teamA.Players.Add(playerB);
+
+		LiveStream.Team teamB = new LiveStream.Team();
+		teamB.State = LiveStream.TeamStates.JudgesReady;
+		teamB.Players.Add(playerB);
+		teamB.Players.Add(playerC);
+
+		LiveStream.Team teamC = new LiveStream.Team();
+		teamC.State = LiveStream.TeamStates.JudgesReady;
+		teamC.Players.Add(playerB);
+		teamC.Players.Add(playerC);
+		teamC.Players.Add(playerD);
+
+		LiveStream.Team teamD = new LiveStream.Team();
+		teamD.State = LiveStream.TeamStates.JudgesReady;
+		teamD.Players.Add(playerC);
+		teamD.Players.Add(playerD);
+
+		SendRestMessageAsync(teamA);
+
+		LiveStream.TeamList teamList = new LiveStream.TeamList();
+		teamList.Teams.Add(teamA);
+		teamList.Teams.Add(teamB);
+		teamList.Teams.Add(teamC);
+		teamList.Teams.Add(teamD);
+
+		SendRestMessageAsync(teamList);
+
+		teamD.DifficultyScore = 10f;
+		SendRestMessageAsync(teamD);
+	}
+
+	void SendRestMessageAsync(LiveStream.TeamList teamList)
+	{
+		StartCoroutine(SendRestMessage(teamList));
+	}
+
+	IEnumerator SendRestMessage(LiveStream.TeamList teamList)
+	{
+		using (UnityWebRequest www = CreateUnityWebRequest("http://localhost:9000/api/teamlist", teamList))
+		{
+			yield return www.Send();
+
+			if (www.isError)
+			{
+				Debug.Log(www.error);
+			}
+			else
+			{
+				Debug.Log(www.downloadHandler.text);
+			}
+		}
+	}
+
+	void SendRestMessageAsync(TeamData team)
+	{
+		LiveStream.Team newTeam = new LiveStream.Team(
+			LiveStream.TeamStates.JudgesReady,
+			CurDivision.ToString(),
+			CurRound.ToString(),
+			((EPool)CurPool).ToString(),
+			CurTeam);
+
+		foreach (PlayerData pd in team.Players)
+		{
+			newTeam.Players.Add(new LiveStream.Player(pd));
+		}
+
+		SendRestMessageAsync(newTeam);
+	}
+
+	void SendRestMessageAsync(LiveStream.Team team)
+	{
+		StartCoroutine(SendRestMessage(team));
+	}
+
+	IEnumerator SendRestMessage(LiveStream.Team team)
+	{
+		using (UnityWebRequest www = CreateUnityWebRequest("http://localhost:9000/api/teams", team))
+		{
+			yield return www.Send();
+
+			if (www.isError)
+			{
+				Debug.Log(www.error);
+			}
+			else
+			{
+				Debug.Log(www.downloadHandler.text);
+			}
+		}
+	}
+
+	UnityWebRequest CreateUnityWebRequest<Type>(string url, Type team)
+	{
+		return CreateUnityWebRequest(url, JsonUtility.ToJson(team));
+	}
+
+	UnityWebRequest CreateUnityWebRequest(string url, string param)
+	{
+		UnityWebRequest requestU = new UnityWebRequest(url, UnityWebRequest.kHttpVerbPOST);
+		byte[] bytes = GetBytes(param);
+		UploadHandlerRaw uH = new UploadHandlerRaw(bytes);
+		uH.contentType = "application/json";
+		requestU.uploadHandler = uH;
+		requestU.SetRequestHeader("Content-Type", "application/json");
+		CastleDownloadHandler dH = new CastleDownloadHandler();
+		requestU.downloadHandler = dH; //need a download handler so that I can read response data
+		return requestU;
+	}
+
+	protected static byte[] GetBytes(string str)
+	{
+		byte[] bytes = Encoding.UTF8.GetBytes(str);
+		return bytes;
+	}
+}
+
+class CastleDownloadHandler : DownloadHandlerScript
+{
+	public delegate void Finished();
+	public event Finished onFinished;
+
+	protected override void CompleteContent()
+	{
+		UnityEngine.Debug.Log("CompleteContent()");
+		base.CompleteContent();
+		if (onFinished != null)
+		{
+			onFinished();
+		}
+	}
+}
+
+namespace LiveStream
+{
+	public enum TeamStates
+	{
+		None,
+		Inited,
+		JudgesReady,
+		Begin,
+		Stopped,
+		Finished,
+		ScoresRecorded
+	}
+
+	[Serializable]
+	public class Player
+	{
+		public string Name;
+		public int Rank;
+		public string HomeCity;
+		public string HomeCountry;
+
+		public Player()
+		{
+		}
+
+		public Player(PlayerData pd)
+		{
+			Name = pd.Fullname;
+			Rank = pd.Rank;
+		}
+	}
+
+	[Serializable]
+	public class Team
+	{
+		public TeamStates State;
+		public string Event;
+		public string Division;
+		public string Pool;
+		public string Round;
+		public string TeamName; // Optional, in case the team has a name
+		public int TeamNumber; // Play Order Number
+		public List<Player> Players = new List<Player>();
+
+		public float ArtisticImpressionScore;
+		public float ExecutionScore;
+		public float DifficultyScore;
+
+		public Team()
+		{
+		}
+
+		public Team(TeamStates state, string div, string round, string pool, int teamNumber)
+		{
+			State = state;
+			Division = div;
+			Round = round;
+			Pool = pool;
+			TeamNumber = teamNumber;
+		}
+	}
+
+	[Serializable]
+	public class TeamList
+	{
+		public List<Team> Teams = new List<Team>();
 	}
 }
 

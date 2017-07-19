@@ -1188,6 +1188,19 @@ public class TournamentData
 			}
 		}
 	}
+
+	public static TeamData GetTeamData(EDivision InDiv, ERound InRound, int InPool, int InTeam)
+	{
+		if ((int)InDiv < Global.AllData.AllDivisions.Length &&
+			(int)InRound < Global.AllData.AllDivisions[(int)InDiv].Rounds.Length &&
+			InPool < Global.AllData.AllDivisions[(int)InDiv].Rounds[(int)InRound].Pools.Count &&
+			InTeam < Global.AllData.AllDivisions[(int)InDiv].Rounds[(int)InRound].Pools[InPool].Teams.Count)
+		{
+			return Global.AllData.AllDivisions[(int)InDiv].Rounds[(int)InRound].Pools[InPool].Teams[InTeam].Data;
+		}
+
+		return null;
+	}
 }
 
 public class RoundComboBox

@@ -1,5 +1,7 @@
 control to change bg color for overlay
 	read from text file
+exit
+Make sure routine length imports into lh
 
 check CurPool being used in AllData lookup in judgers when they send data
 header button OnClick events need to be registered at startup.  Or remove them from editor hooks
