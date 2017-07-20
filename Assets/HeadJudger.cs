@@ -6,6 +6,7 @@ using System.Text;
 using System;
 using System.Collections.Generic;
 using UnityEngine.Networking;
+using System.Timers;
 
 public class HeadJudger : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class HeadJudger : MonoBehaviour
 	int CancelClickCount = 0;
 	float CancelClickTimer = -1f;
 	public int ActiveJudgingJudgers = 0;
+	bool bRoutineTimeElapsed = false;
 
 	// Use this for initialization
 	void Start()
@@ -512,7 +514,7 @@ public class HeadJudger : MonoBehaviour
 
 				// Send ready to livestream
 				TeamData readyTeam = Global.GetTeamData(CurDivision, CurRound, CurPool, CurTeam);
-				SendRestMessageAsync(readyTeam);
+				SendRestMessageAsync(readyTeam, LiveStream.TeamStates.JudgesReady);
 			}
 		}
 		else
@@ -539,7 +541,7 @@ public class HeadJudger : MonoBehaviour
 					CancelClickCount = 0;
 					CancelClickTimer = -1f;
 
-					StopRoutine();
+					StopRoutine(true);
 				}
 				else if (CancelClickTimer < 0)
 				{
@@ -564,10 +566,21 @@ public class HeadJudger : MonoBehaviour
 
 			RoutineStartTime = DateTime.Now;
 			bJudging = true;
+
+			// Send start to livestream
+			TeamData readyTeam = Global.GetTeamData(CurDivision, CurRound, CurPool, CurTeam);
+			SendRestMessageAsync(readyTeam, LiveStream.TeamStates.Begin);
+
+			bRoutineTimeElapsed = false;
 		}
 	}
 
 	public void StopRoutine()
+	{
+		StopRoutine(false);
+	}
+
+	public void StopRoutine(bool bCancelled)
 	{
 		if (bJudging)
 		{
@@ -575,6 +588,33 @@ public class HeadJudger : MonoBehaviour
 
 			bJudging = false;
 			bLockedForJudging = false;
+
+			// Send message to livestream
+			TeamData stoppedTeam = Global.GetTeamData(CurDivision, CurRound, CurPool, CurTeam);
+			if (bCancelled && !bRoutineTimeElapsed)
+			{
+				SendRestMessageAsync(stoppedTeam, LiveStream.TeamStates.Stopped);
+			}
+			else
+			{
+				LiveStream.Team finishedTeam = new LiveStream.Team(
+					LiveStream.TeamStates.ScoresRecorded,
+					CurDivision.ToString(),
+					CurRound.ToString(),
+					((EPool)CurPool).ToString(),
+					CurTeam);
+
+				foreach (PlayerData pd in stoppedTeam.Players)
+				{
+					finishedTeam.Players.Add(new LiveStream.Player(pd));
+				}
+
+				finishedTeam.DifficultyScore = stoppedTeam.RoutineScores.GetDiffPoints();
+				finishedTeam.ArtisticImpressionScore = stoppedTeam.RoutineScores.GetAIPoints();
+				finishedTeam.ExecutionScore = stoppedTeam.RoutineScores.GetExPoints();
+
+				SendRestMessageAsync(finishedTeam);
+			}
 		}
 	}
 
@@ -657,6 +697,15 @@ public class HeadJudger : MonoBehaviour
 			GUIContent RoutineTime = new GUIContent(String.Format("{0}:{1:00} / {2}:{3:00}", Minutes, Seconds, RoundMinutes, RoundSeconds));
 			Vector2 TimeSize = InfoStyle.CalcSize(RoutineTime);
 			GUI.Label(new Rect(Screen.width - 20 - TimeSize.x, InfoY, TimeSize.x, TimeSize.y), RoutineTime, InfoStyle);
+
+			if (TotalSeconds > Round.RoutineLengthMinutes * 60 && !bRoutineTimeElapsed)
+			{
+				bRoutineTimeElapsed = true;
+
+				// Send ready to livestream
+				TeamData finishedTeam = Global.GetTeamData(CurDivision, CurRound, CurPool, CurTeam);
+				SendRestMessageAsync(finishedTeam, LiveStream.TeamStates.Finished);
+			}
 		}
 
 		if (bFestivalJudging)
@@ -1037,27 +1086,10 @@ public class HeadJudger : MonoBehaviour
 		StartCoroutine(SendRestMessage(teamList));
 	}
 
-	IEnumerator SendRestMessage(LiveStream.TeamList teamList)
-	{
-		using (UnityWebRequest www = CreateUnityWebRequest("http://localhost:9000/api/teamlist", teamList))
-		{
-			yield return www.Send();
-
-			if (www.isError)
-			{
-				Debug.Log(www.error);
-			}
-			else
-			{
-				Debug.Log(www.downloadHandler.text);
-			}
-		}
-	}
-
-	void SendRestMessageAsync(TeamData team)
+	void SendRestMessageAsync(TeamData team, LiveStream.TeamStates teamState)
 	{
 		LiveStream.Team newTeam = new LiveStream.Team(
-			LiveStream.TeamStates.JudgesReady,
+			teamState,
 			CurDivision.ToString(),
 			CurRound.ToString(),
 			((EPool)CurPool).ToString(),
@@ -1093,6 +1125,22 @@ public class HeadJudger : MonoBehaviour
 		}
 	}
 
+	IEnumerator SendRestMessage(LiveStream.TeamList teamList)
+	{
+		using (UnityWebRequest www = CreateUnityWebRequest("http://localhost:9000/api/teamlist", teamList))
+		{
+			yield return www.Send();
+
+			if (www.isError)
+			{
+				Debug.Log(www.error);
+			}
+			else
+			{
+				Debug.Log(www.downloadHandler.text);
+			}
+		}
+	}
 	UnityWebRequest CreateUnityWebRequest<Type>(string url, Type team)
 	{
 		return CreateUnityWebRequest(url, JsonUtility.ToJson(team));

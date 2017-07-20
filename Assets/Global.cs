@@ -520,13 +520,32 @@ public class RoutineScoreData
 
 	public float GetTotalPoints()
 	{
+		return GetExPoints() + GetAIPoints() + GetDiffPoints();
+	}
+
+	public float GetExPoints()
+	{
 		float TotalPoints = 0;
 
 		foreach (ExData ed in ExResults)
 			TotalPoints += ed.GetTotalPoints();
 
+		return TotalPoints;
+	}
+
+	public float GetAIPoints()
+	{
+		float TotalPoints = 0;
+
 		foreach (AIData ad in AIResults)
 			TotalPoints += ad.GetTotalPoints();
+
+		return TotalPoints;
+	}
+
+	public float GetDiffPoints()
+	{
+		float TotalPoints = 0;
 
 		foreach (DiffData dd in DiffResults)
 			TotalPoints += dd.GetTotalPoints();
