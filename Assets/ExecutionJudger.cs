@@ -141,7 +141,7 @@ public class ExecutionJudger : JudgerBase
 		CurData.JudgeNameId = GetJudgeNameId();
 		SData.SetExResults(CurData);
 
-		if (Networking.bConnectToSever)
+		if (Networking.IsConnectedToServer)
 		{
 			Debug.Log(" send ex data to server " + CurData.Point1Count);
 
@@ -158,7 +158,7 @@ public class ExecutionJudger : JudgerBase
 	{
 		base.SendCachedResultsToHeadJudger();
 
-		if (Networking.bConnectToSever)
+		if (Networking.IsConnectedToServer)
 		{
 			Global.NetObj.ClientSendFinishJudgingEx(CachedData.SerializeToString());
 			Networking.bNeedSendCachedResults = false;

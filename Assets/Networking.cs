@@ -18,7 +18,11 @@ public class Networking : MonoBehaviour
 	static float PingServerTimer = -1f;
 	public static string ServerIp = "";
 	static Socket BroadcastSocket;
-	public static bool bConnectToSever = false;
+	public static bool IsConnectedToServer = false;
+	public static bool HasConnection
+	{
+		get { return Network.connections.Length > 0; }
+	}
 	public static bool bGettingDivision = false;
 	public static bool bGettingNames = false;
 	public static string AllDataBuilderString = "";
@@ -108,7 +112,7 @@ public class Networking : MonoBehaviour
 		Byte[] ReceiveBytes = u.EndReceive(ar, ref e);
 		string ReceiveString = Encoding.ASCII.GetString(ReceiveBytes);
 
-		Debug.Log(" received: " + ReceiveString);
+		Debug.Log("received: " + ReceiveString);
 
 		bGotMessage = true;
 
@@ -152,13 +156,18 @@ public class Networking : MonoBehaviour
 				}
 			}
 
-			if (!bConnectToSever && ServerIp.Length > 0)
+			if (!IsConnectedToServer && ServerIp.Length > 0)
 			{
 				if (Network.Connect(ServerIp, 8765) == NetworkConnectionError.NoError)
 				{
-					bConnectToSever = true;
+					IsConnectedToServer = true;
 					bSentConnectedMessage = false;
 				}
+			}
+
+			if (Network.isClient && !HasConnection)
+			{
+				IsConnectedToServer = false;
 			}
 
 			if (!bSentConnectedMessage && Network.isClient)
@@ -194,7 +203,7 @@ public class Networking : MonoBehaviour
 		Debug.Log(" disconnected network");
 
 		ServerIp = "";
-		bConnectToSever = false;
+		IsConnectedToServer = false;
 	}
 
 	public void SendDataToJudgers(string InDataString, string InNameString)
@@ -301,31 +310,31 @@ public class Networking : MonoBehaviour
 
 	public void SendJudgeReady(string InGuid, bool bInReady)
 	{
-		if (bConnectToSever)
+		if (IsConnectedToServer)
 			GetComponent<NetworkView>().RPC("SendJudgeReadyRPC", RPCMode.Others, InGuid, bInReady);
 	}
 
 	public void SendJudgeLocked(string InGuid, bool bInLocked)
 	{
-		if (bConnectToSever)
+		if (IsConnectedToServer)
 			GetComponent<NetworkView>().RPC("SendJudgeLockedRPC", RPCMode.Others, InGuid, bInLocked);
 	}
 
 	public void SendJudgeJudging(string InGuid, bool bInJudging)
 	{
-		if (bConnectToSever)
+		if (IsConnectedToServer)
 			GetComponent<NetworkView>().RPC("SendJudgeJudgingRPC", RPCMode.Others, InGuid, bInJudging);
 	}
 	
 	public void SendJudgeEditing(string InGuid, bool bInEditing)
 	{
-		if (bConnectToSever)
+		if (IsConnectedToServer)
 			GetComponent<NetworkView>().RPC("SendJudgeEditingRPC", RPCMode.Server, InGuid, bInEditing);
 	}
 
 	public void SendJudgeNameId(string InGuid, int InNameId)
 	{
-		if (bConnectToSever)
+		if (IsConnectedToServer)
 			GetComponent<NetworkView>().RPC("SendJudgeNameIdRPC", RPCMode.Others, InGuid, InNameId);
 	}
 

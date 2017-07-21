@@ -358,7 +358,7 @@ public class DifficultyJudger : JudgerBase
 		CurData.JudgeNameId = GetJudgeNameId();
 		SData.SetDiffResults(CurData);
 
-		if (Networking.bConnectToSever)
+		if (Networking.IsConnectedToServer)
 			Global.NetObj.ClientSendFinishJudgingDiff(CurData.SerializeToString());
 		else
 		{
@@ -371,7 +371,7 @@ public class DifficultyJudger : JudgerBase
 	{
 		base.SendCachedResultsToHeadJudger();
 
-		if (Networking.bConnectToSever)
+		if (Networking.IsConnectedToServer)
 		{
 			Global.NetObj.ClientSendFinishJudgingDiff(CachedData.SerializeToString());
 			Networking.bNeedSendCachedResults = false;

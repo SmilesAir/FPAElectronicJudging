@@ -202,7 +202,7 @@ public class ArtisticImpressionJudger : JudgerBase
 		CurData.JudgeNameId = GetJudgeNameId();
 		SData.SetAIResults(CurData);
 
-		if (Networking.bConnectToSever)
+		if (Networking.IsConnectedToServer)
 			Global.NetObj.ClientSendFinishJudgingAI(CurData.SerializeToString());
 		else
 		{
@@ -215,7 +215,7 @@ public class ArtisticImpressionJudger : JudgerBase
 	{
 		base.SendCachedResultsToHeadJudger();
 
-		if (Networking.bConnectToSever)
+		if (Networking.IsConnectedToServer)
 		{
 			Global.NetObj.ClientSendFinishJudgingAI(CachedData.SerializeToString());
 			Networking.bNeedSendCachedResults = false;
