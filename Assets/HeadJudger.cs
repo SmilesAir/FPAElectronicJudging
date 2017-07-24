@@ -1001,7 +1001,9 @@ public class HeadJudger : MonoBehaviour
 	{
 		Global.AllData.Save();
 
-		if (bJudging)
+		UpdateActiveJudgingJudgersCount();
+
+		if (bJudging && ActiveJudgingJudgers == 0)
 		{
 			ResultsData RData = TournamentData.FindResultsData(CurDivision, CurRound, CurPool);
 			if (RData != null)

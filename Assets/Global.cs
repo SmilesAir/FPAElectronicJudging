@@ -311,11 +311,11 @@ public class Global : MonoBehaviour
 
 			if (www.isError)
 			{
-				Debug.Log(www.error);
+				Debug.Log("Rest Api: " + www.error);
 			}
 			else
 			{
-				Debug.Log(www.downloadHandler.text);
+				Debug.Log("Rest Api: " + www.downloadHandler.text);
 			}
 		}
 	}
