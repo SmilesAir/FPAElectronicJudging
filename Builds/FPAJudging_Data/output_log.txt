@@ -21,7 +21,7 @@ Platform assembly: C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Manag
 Loading C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\I18N.dll into Unity Child Domain
 Platform assembly: C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\I18N.West.dll (this message is harmless)
 Loading C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\I18N.West.dll into Unity Child Domain
-- Completed reload, in  0.037 seconds
+- Completed reload, in  0.058 seconds
 Platform assembly: C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\System.dll (this message is harmless)
 Platform assembly: C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\System.Xml.dll (this message is harmless)
