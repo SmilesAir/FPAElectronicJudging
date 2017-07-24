@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 using System.IO;
 using System.Text;
+using UnityEngine.Networking;
 
 public class Global : MonoBehaviour
 {
@@ -301,6 +302,63 @@ public class Global : MonoBehaviour
     {
         VoiceObj.speak(text);
     }
+
+	public static IEnumerator SendRestMessage(LiveStream.Team team)
+	{
+		using (UnityWebRequest www = CreateUnityWebRequest("http://localhost:9000/api/teams", team))
+		{
+			yield return www.Send();
+
+			if (www.isError)
+			{
+				Debug.Log(www.error);
+			}
+			else
+			{
+				Debug.Log(www.downloadHandler.text);
+			}
+		}
+	}
+
+	public static IEnumerator SendRestMessage(LiveStream.TeamList teamList)
+	{
+		using (UnityWebRequest www = CreateUnityWebRequest("http://localhost:9000/api/teamlist", teamList))
+		{
+			yield return www.Send();
+
+			if (www.isError)
+			{
+				Debug.Log(www.error);
+			}
+			else
+			{
+				Debug.Log(www.downloadHandler.text);
+			}
+		}
+	}
+	public static UnityWebRequest CreateUnityWebRequest<Type>(string url, Type team)
+	{
+		return CreateUnityWebRequest(url, JsonUtility.ToJson(team));
+	}
+
+	public static UnityWebRequest CreateUnityWebRequest(string url, string param)
+	{
+		UnityWebRequest requestU = new UnityWebRequest(url, UnityWebRequest.kHttpVerbPOST);
+		byte[] bytes = GetBytes(param);
+		UploadHandlerRaw uH = new UploadHandlerRaw(bytes);
+		uH.contentType = "application/json";
+		requestU.uploadHandler = uH;
+		requestU.SetRequestHeader("Content-Type", "application/json");
+		CastleDownloadHandler dH = new CastleDownloadHandler();
+		requestU.downloadHandler = dH; //need a download handler so that I can read response data
+		return requestU;
+	}
+
+	protected static byte[] GetBytes(string str)
+	{
+		byte[] bytes = Encoding.UTF8.GetBytes(str);
+		return bytes;
+	}
 }
 
 public enum EInterface

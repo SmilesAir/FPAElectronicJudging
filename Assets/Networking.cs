@@ -162,12 +162,9 @@ public class Networking : MonoBehaviour
 				{
 					IsConnectedToServer = true;
 					bSentConnectedMessage = false;
-				}
-			}
 
-			if (Network.isClient && !HasConnection)
-			{
-				IsConnectedToServer = false;
+					Debug.Log("Connected to: " + ServerIp);
+				}
 			}
 
 			if (!bSentConnectedMessage && Network.isClient)
@@ -200,7 +197,15 @@ public class Networking : MonoBehaviour
 
 	void OnDisconnectedFromServer(NetworkDisconnection info)
 	{
-		Debug.Log(" disconnected network");
+		Debug.Log(" disconnected network: " + ServerIp);
+
+		ServerIp = "";
+		IsConnectedToServer = false;
+	}
+
+	void OnFailedToConnect(NetworkConnectionError error)
+	{
+		Debug.Log("Could not connect to server: " + error);
 
 		ServerIp = "";
 		IsConnectedToServer = false;

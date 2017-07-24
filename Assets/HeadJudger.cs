@@ -1075,15 +1075,10 @@ public class HeadJudger : MonoBehaviour
 		teamList.Teams.Add(teamC);
 		teamList.Teams.Add(teamD);
 
-		SendRestMessageAsync(teamList);
+		//SendRestMessageAsync(teamList);
 
 		teamD.DifficultyScore = 10f;
 		SendRestMessageAsync(teamD);
-	}
-
-	void SendRestMessageAsync(LiveStream.TeamList teamList)
-	{
-		StartCoroutine(SendRestMessage(teamList));
 	}
 
 	void SendRestMessageAsync(TeamData team, LiveStream.TeamStates teamState)
@@ -1105,64 +1100,7 @@ public class HeadJudger : MonoBehaviour
 
 	void SendRestMessageAsync(LiveStream.Team team)
 	{
-		StartCoroutine(SendRestMessage(team));
-	}
-
-	IEnumerator SendRestMessage(LiveStream.Team team)
-	{
-		using (UnityWebRequest www = CreateUnityWebRequest("http://localhost:9000/api/teams", team))
-		{
-			yield return www.Send();
-
-			if (www.isError)
-			{
-				Debug.Log(www.error);
-			}
-			else
-			{
-				Debug.Log(www.downloadHandler.text);
-			}
-		}
-	}
-
-	IEnumerator SendRestMessage(LiveStream.TeamList teamList)
-	{
-		using (UnityWebRequest www = CreateUnityWebRequest("http://localhost:9000/api/teamlist", teamList))
-		{
-			yield return www.Send();
-
-			if (www.isError)
-			{
-				Debug.Log(www.error);
-			}
-			else
-			{
-				Debug.Log(www.downloadHandler.text);
-			}
-		}
-	}
-	UnityWebRequest CreateUnityWebRequest<Type>(string url, Type team)
-	{
-		return CreateUnityWebRequest(url, JsonUtility.ToJson(team));
-	}
-
-	UnityWebRequest CreateUnityWebRequest(string url, string param)
-	{
-		UnityWebRequest requestU = new UnityWebRequest(url, UnityWebRequest.kHttpVerbPOST);
-		byte[] bytes = GetBytes(param);
-		UploadHandlerRaw uH = new UploadHandlerRaw(bytes);
-		uH.contentType = "application/json";
-		requestU.uploadHandler = uH;
-		requestU.SetRequestHeader("Content-Type", "application/json");
-		CastleDownloadHandler dH = new CastleDownloadHandler();
-		requestU.downloadHandler = dH; //need a download handler so that I can read response data
-		return requestU;
-	}
-
-	protected static byte[] GetBytes(string str)
-	{
-		byte[] bytes = Encoding.UTF8.GetBytes(str);
-		return bytes;
+		StartCoroutine(Global.SendRestMessage(team));
 	}
 }
 

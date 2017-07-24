@@ -554,6 +554,11 @@ public class BracketViewer : MonoBehaviour
 		}
 	}
 
+	void SendRestMessageAsync(LiveStream.TeamList teamList)
+	{
+		StartCoroutine(Global.SendRestMessage(teamList));
+	}
+
 	void OnGUI()
 	{
 		if (!bIsEditing)
@@ -578,14 +583,59 @@ public class BracketViewer : MonoBehaviour
 			bEditAddNewData = false;
 		}
 
-		if (!bIsEditing && GUI.Button(new Rect(Screen.width * .3f, Screen.height * .03f, Screen.width * .25f, Screen.height * .07f), "Export SCHEDULE to Excel"))
+		if (!bIsEditing && GUI.Button(new Rect(Screen.width * .3f, Screen.height * .04f, Screen.width * .25f, Screen.height * .07f), "Export SCHEDULE to Excel"))
 		{
 			ExportScheduleToExcel();
 		}
 
-		if (!bIsEditing && GUI.Button(new Rect(Screen.width * .6f, Screen.height * .03f, Screen.width * .25f, Screen.height * .07f), "Export RESULTS to Excel"))
+		if (!bIsEditing && GUI.Button(new Rect(Screen.width * .56f, Screen.height * .04f, Screen.width * .23f, Screen.height * .07f), "Export RESULTS to Excel"))
 		{
 			ExportResultsToExcel();
+		}
+
+		if (GUI.Button(new Rect(Screen.width * .83f, Screen.height * .04f, Screen.width * .17f - 20, Screen.height * .07f), "Send All Teams to Livestream"))
+		{
+			LiveStream.TeamList teamList = new LiveStream.TeamList();
+			EDivision division = EDivision.Open;
+			foreach (DivisionData dd in Global.AllData.AllDivisions)
+			{
+				ERound round = ERound.Finals;
+				foreach (RoundData rd in dd.Rounds)
+				{
+					EPool pool = EPool.A;
+					foreach (PoolData pd in rd.Pools)
+					{
+						int teamNumber = 0;
+						foreach (TeamDataDisplay td in pd.Teams)
+						{
+							LiveStream.Team team = new LiveStream.Team(
+								LiveStream.TeamStates.Inited,
+								division.ToString(),
+								round.ToString(),
+								pool.ToString(),
+								teamNumber
+								);
+
+							foreach (PlayerData playerData in td.Data.Players)
+							{
+								team.Players.Add(new LiveStream.Player(playerData));
+							}
+
+							teamList.Teams.Add(team);
+
+							++teamNumber;
+						}
+
+						++pool;
+					}
+
+					++round;
+				}
+
+				++division;
+			}
+
+			SendRestMessageAsync(teamList);
 		}
 
 		#region Round Buttons
