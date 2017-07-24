@@ -40,6 +40,7 @@ public class Global : MonoBehaviour
 
 	public static int DivDataState = -1;
 	public static int CurDataState = -1;
+	int FastFramesCount = 0;
 
 	// Use this for initialization
 	void Start()
@@ -56,11 +57,31 @@ public class Global : MonoBehaviour
 		Obj = GetComponent<Global>();
 
         VoiceObj = GetComponent<WindowsVoice>();
-    }
+
+		QualitySettings.vSyncCount = 0;
+		Application.targetFrameRate = 5;
+	}
 
 	// Update is called once per frame
 	void Update()
 	{
+		--FastFramesCount;
+
+		if (Input.GetMouseButton(0) || Input.touchCount > 0)
+		{
+			Application.targetFrameRate = -1;
+
+			FastFramesCount = 100;
+		}
+		else if (FastFramesCount > 0)
+		{
+			Application.targetFrameRate = -1;
+		}
+		else
+		{
+			Application.targetFrameRate = 5;
+		}
+
 		if (LastActiveInterface != ActiveInterface)
 		{
 			BracketBuilder.SetActive(false);
