@@ -30,6 +30,7 @@ public class JudgerBase : InterfaceBase
 
 	float TestReadyTimer = 1f;
 	public bool TestReady = false;
+	public int QuitGestureSuccessCount = 0;
 
 	// Use this for initialization
 	public void Start()
@@ -149,6 +150,8 @@ public class JudgerBase : InterfaceBase
 	// Update is called once per frame
 	public void Update()
 	{
+		UpdateQuitGesture();
+
 		Global.NetObj.UpdateUdpListener();
 
 		Global.NetObj.UpdateClientJudgeState();
@@ -296,4 +299,62 @@ public class JudgerBase : InterfaceBase
     {
         bLockedForJudging = true;
     }
+
+	public void UpdateQuitGesture()
+	{
+		Vector3 mousePos = Input.mousePosition;
+		mousePos.y = Screen.height - mousePos.y;
+		bool bMatching = false;
+		if (Input.GetMouseButton(0))
+		{
+			Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f);
+			mousePos -= screenCenter;
+			if (mousePos.magnitude > Screen.height * .15f)
+			{
+				int curQuadrent = 0;
+				if (mousePos.x > 0)
+				{
+					if (mousePos.y > 0)
+					{
+						curQuadrent = 0;
+					}
+					else
+					{
+						curQuadrent = 1;
+					}
+				}
+				else
+				{
+					if (mousePos.y > 0)
+					{
+						curQuadrent = 3;
+					}
+					else
+					{
+						curQuadrent = 2;
+					}
+				}
+
+				if (curQuadrent == (QuitGestureSuccessCount % 4))
+				{
+					bMatching = true;
+					++QuitGestureSuccessCount;
+				}
+				else if (curQuadrent == ((QuitGestureSuccessCount - 1) % 4))
+				{
+					bMatching = true;
+				}
+
+				if (QuitGestureSuccessCount >= 12)
+				{
+					Application.Quit();
+				}
+			}
+		}
+
+		if (!bMatching)
+		{
+			QuitGestureSuccessCount = 0;
+		}
+	}
 }
