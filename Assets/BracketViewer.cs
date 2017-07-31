@@ -344,8 +344,8 @@ public class BracketViewer : MonoBehaviour
 	{
 		writer.WriteStartElement("ns2:RoundSettings");
 		{
-			writer.WriteElementString("ns2:EventTitle", "Frisbeer 2016");
-			writer.WriteElementString("ns2:EventSubtitle", "Prague");
+			writer.WriteElementString("ns2:EventTitle", "FPAW 2017");
+			writer.WriteElementString("ns2:EventSubtitle", "Udine, IT");
 			writer.WriteElementString("ns2:Division", ((EDivision)CurDivIndex).ToString());
 			writer.WriteElementString("ns2:Round", ((ERound)CurRoundIndex).ToString());
 			writer.WriteElementString("ns2:Pool", PoolName);

@@ -948,6 +948,8 @@ public class HeadJudger : MonoBehaviour
 			{
 				ActiveJudgingJudgers = Count;
 				++Global.CurDataState;
+
+				UpdateFinishRoutineAndGoToNextTeam();
 			}
 		}
 	}
@@ -997,12 +999,8 @@ public class HeadJudger : MonoBehaviour
 		}
 	}
 
-	public void OnRecievedResultsData(bool bFirstScore)
+	private void UpdateFinishRoutineAndGoToNextTeam()
 	{
-		Global.AllData.Save();
-
-		UpdateActiveJudgingJudgersCount();
-
 		if (bJudging && ActiveJudgingJudgers == 0)
 		{
 			ResultsData RData = TournamentData.FindResultsData(CurDivision, CurRound, CurPool);
@@ -1035,6 +1033,15 @@ public class HeadJudger : MonoBehaviour
 				}
 			}
 		}
+	}
+
+	public void OnRecievedResultsData(bool bFirstScore)
+	{
+		Global.AllData.Save();
+
+		UpdateActiveJudgingJudgersCount();
+
+		UpdateFinishRoutineAndGoToNextTeam();
 	}
 
 	void TestRestApi()
