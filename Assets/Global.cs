@@ -41,6 +41,9 @@ public class Global : MonoBehaviour
 	public static int DivDataState = -1;
 	public static int CurDataState = -1;
 
+	// http://localhost:9000
+	public static string LivestreamCompUrl = "http://192.168.8.101:9000";
+
 	// Use this for initialization
 	void Start()
 	{
@@ -305,7 +308,8 @@ public class Global : MonoBehaviour
 
 	public static IEnumerator SendRestMessage(LiveStream.Team team)
 	{
-		using (UnityWebRequest www = CreateUnityWebRequest("http://localhost:9000/api/teams", team))
+		// http://localhost:9000
+		using (UnityWebRequest www = CreateUnityWebRequest(LivestreamCompUrl + "/api/teams", team))
 		{
 			yield return www.Send();
 
@@ -322,7 +326,7 @@ public class Global : MonoBehaviour
 
 	public static IEnumerator SendRestMessage(LiveStream.TeamList teamList)
 	{
-		using (UnityWebRequest www = CreateUnityWebRequest("http://localhost:9000/api/teamlist", teamList))
+		using (UnityWebRequest www = CreateUnityWebRequest(LivestreamCompUrl + "/api/teamlist", teamList))
 		{
 			yield return www.Send();
 

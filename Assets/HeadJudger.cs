@@ -1022,12 +1022,67 @@ public class HeadJudger : MonoBehaviour
 
 					if (Global.IsValid(CurDivision, CurRound, CurPool, CurTeam))
 					{
-						int TeamCount = Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[CurPool].Teams.Count;
+						int curPoolTeamCount = Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[CurPool].Teams.Count;
 
-						if (CurTeam < TeamCount - 1)
+						if (bFestivalJudging)
 						{
-							++CurTeam;
-							++Global.CurDataState;
+							int cachedTeamIndex = CurTeam;
+							int newPool = CurPool + 2;
+
+							if (newPool >= 4)
+							{
+								newPool = newPool % 4;
+								if (newPool < Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools.Count)
+								{
+									int newPoolTeamCount = Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[newPool].Teams.Count;
+
+									if (cachedTeamIndex < newPoolTeamCount - 1)
+									{
+										CurPool = newPool;
+										InitJudgersNameIds();
+										CurTeam = cachedTeamIndex + 1;
+										++Global.CurDataState;
+									}
+									else if (cachedTeamIndex < curPoolTeamCount - 1)
+									{
+										CurTeam = cachedTeamIndex + 1;
+										++Global.CurDataState;
+									}
+									else
+									{
+										// End of pools
+									}
+								}
+							}
+							else
+							{
+								int newPoolTeamCount = Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[newPool].Teams.Count;
+
+								if (cachedTeamIndex >= newPoolTeamCount && cachedTeamIndex < curPoolTeamCount - 1)
+								{
+									CurTeam = cachedTeamIndex + 1;
+									++Global.CurDataState;
+								}
+								else if (cachedTeamIndex < newPoolTeamCount)
+								{
+									CurPool = newPool;
+									CurTeam = cachedTeamIndex;
+									InitJudgersNameIds();
+									++Global.CurDataState;
+								}
+								else
+								{
+									// End of Pools
+								}
+							}
+						}
+						else
+						{
+							if (CurTeam < curPoolTeamCount - 1)
+							{
+								++CurTeam;
+								++Global.CurDataState;
+							}
 						}
 					}
 				}
