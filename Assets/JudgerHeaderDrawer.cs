@@ -27,6 +27,7 @@ public class JudgerHeaderDrawer : MonoBehaviour
 	public int WaitingForJudgesCount = 0;
 	int ShowBackupTapCount = 0;
 	float ShowBackupTapCooldown = 0f;
+	public AudioClip CallForReadyAudioClip;
 
 	public GameObject CanvasGO;
     public GameObject JudgeNameUI;
@@ -63,7 +64,9 @@ public class JudgerHeaderDrawer : MonoBehaviour
 
     void OnReadyButtonClick()
     {
-        bIsHoldForReady = true;
+		Global.GlobalAudioSource.Stop();
+
+		bIsHoldForReady = true;
 
         if (PressedHoldForReady != null)
             PressedHoldForReady();
@@ -97,7 +100,7 @@ public class JudgerHeaderDrawer : MonoBehaviour
 		{
 			ShowBackupTapCooldown += Time.deltaTime;
 
-			if (ShowBackupTapCooldown > 1f)
+			if (ShowBackupTapCooldown > .5f)
 			{
 				ShowBackupTapCooldown = 0f;
 				ShowBackupTapCount = 0;
@@ -111,26 +114,34 @@ public class JudgerHeaderDrawer : MonoBehaviour
         CategoryUI.GetComponent<Text>().text = DivisionString;
         TeamNameUI.GetComponent<Text>().text = TeamName;
 
+		// Backup Menu
+		Vector3 MousePos = Input.mousePosition;
+		MousePos.y = Screen.height - MousePos.y;
+		Rect ShowBackupRect = new Rect(0, 0, 200f, 200f);
+		if (Input.GetMouseButtonDown(0) && ShowBackupRect.Contains(MousePos))
+		{
+			ShowBackupTapCooldown = 0f;
+			++ShowBackupTapCount;
+
+			if (ShowBackupTapCount > 8)
+			{
+				ShowBackupTapCount = 0;
+				if (OnRecoverAutosave != null)
+					OnRecoverAutosave();
+			}
+		}
+
 		if (bShowReadyButton)
 		{
             ReadyButtonUI.gameObject.SetActive(true);
             FinishedButtonUI.gameObject.SetActive(false);
             TimeUI.SetActive(false);
 
-			Vector3 MousePos = Input.mousePosition;
-			MousePos.y = Screen.height - MousePos.y;
-			Rect ShowBackupRect = new Rect(0, 0, 200f, 200f);
-			if (Input.GetMouseButtonDown(0) && ShowBackupRect.Contains(MousePos))
+			if (!Global.GlobalAudioSource.isPlaying)
 			{
-				ShowBackupTapCooldown = 0f;
-				++ShowBackupTapCount;
-
-				if (ShowBackupTapCount > 4)
-				{
-					ShowBackupTapCount = 0;
-					if (OnRecoverAutosave != null)
-						OnRecoverAutosave();
-				}
+				Global.GlobalAudioSource.clip = CallForReadyAudioClip;
+				Global.GlobalAudioSource.loop = true;
+				Global.GlobalAudioSource.Play();
 			}
 		}
         else if (bShowFinishedButton)

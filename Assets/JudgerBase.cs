@@ -345,7 +345,7 @@ public class JudgerBase : InterfaceBase
 					bMatching = true;
 				}
 
-				if (QuitGestureSuccessCount >= 12)
+				if (QuitGestureSuccessCount >= 10)
 				{
 					Application.Quit();
 				}

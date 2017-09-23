@@ -409,8 +409,6 @@ public class DifficultyJudger : JudgerBase
 				NSArray[i].NumberValue = CurData.DiffScores[i];
 				ConsecScores[i] = CurData.ConsecScores[i];
 			}
-
-			ConsecScores = CurData.ConsecScores;
 		}
 	}
 

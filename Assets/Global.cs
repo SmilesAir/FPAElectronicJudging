@@ -31,6 +31,7 @@ public class Global : MonoBehaviour
 	public static NameDatabase AllNameData = null;
     static WindowsVoice VoiceObj = null;
 	public static int MaxBackupFileCount = 40;
+	public static AudioSource GlobalAudioSource = null;
 
 	public static EDivision CurrentDivision = EDivision.Open;
 
@@ -61,8 +62,9 @@ public class Global : MonoBehaviour
 
         VoiceObj = GetComponent<WindowsVoice>();
 
+		GlobalAudioSource = GetComponent<AudioSource>();
+
 		QualitySettings.vSyncCount = 0;
-		Application.targetFrameRate = 5;
 	}
 
 	// Update is called once per frame
@@ -72,17 +74,17 @@ public class Global : MonoBehaviour
 
 		if (Input.GetMouseButton(0) || Input.touchCount > 0)
 		{
-			Application.targetFrameRate = -1;
+			Application.targetFrameRate = 20;
 
 			FastFramesCount = 100;
 		}
 		else if (FastFramesCount > 0)
 		{
-			Application.targetFrameRate = -1;
+			Application.targetFrameRate = 20;
 		}
 		else
 		{
-			Application.targetFrameRate = 5;
+			Application.targetFrameRate = 7;
 		}
 
 		if (LastActiveInterface != ActiveInterface)
