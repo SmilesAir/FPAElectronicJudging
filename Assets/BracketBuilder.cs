@@ -1096,7 +1096,7 @@ public class TournamentData
 		}
 		catch (System.Exception e)
 		{
-			Debug.Log("Loading exception: " + e.Message);
+			Debug.Log("Loading exception: in " + Filename + "   " + e.InnerException);
 		}
 
 		return LoadedData;
@@ -1124,7 +1124,7 @@ public class TournamentData
 		return null;
 	}
 
-	public static ResultsData FindResultsData(EDivision InDiv, ERound InRound, int InPool)
+	public static ResultsData FindResultsData(EDivision InDiv, ERound InRound, EPool InPool)
 	{
 		if (Global.AllData.ResultsList == null)
 			return null;

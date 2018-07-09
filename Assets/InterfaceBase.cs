@@ -8,7 +8,7 @@ public class InterfaceBase : MonoBehaviour
     public bool bIsJudging = false;
     public EDivision CurDivision = EDivision.Open;
     public ERound CurRound = ERound.Prelims;
-    public int CurPool = -1;
+    public EPool CurPool = EPool.None;
     public int CurTeam = -1;
 	public int CurJudgingTeam = -1;
 	public int WaitingForJudgesCount = 0;
@@ -27,9 +27,14 @@ public class InterfaceBase : MonoBehaviour
         bIsJudging = false;
     }
 
-    public float GetRoutineLengthMinutes()
+	public virtual void ResetRoutineJudging()
+	{
+		bIsJudging = false;
+	}
+
+	public float GetRoutineLengthMinutes()
     {
-        if (Global.AllData == null || CurPool < 0 || CurPool >= Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools.Count)
+        if (Global.AllData == null || CurPool == EPool.None || (int)CurPool >= Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools.Count)
             return 0;
 
         return Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].RoutineLengthMinutes;

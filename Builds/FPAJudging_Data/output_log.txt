@@ -1,0 +1,4649 @@
+Initialize engine version: 5.6.1f1 (2860b30f0b54)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   22.21.13.8205
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\I18N.dll (this message is harmless)
+Platform assembly: C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\I18N.West.dll (this message is harmless)
+Platform assembly: C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\I18N.dll (this message is harmless)
+Loading C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\I18N.dll into Unity Child Domain
+Platform assembly: C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\I18N.West.dll (this message is harmless)
+Loading C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\I18N.West.dll into Unity Child Domain
+- Completed reload, in  0.068 seconds
+Platform assembly: C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Ryan\Desktop\LisaHelper\Builds\FPAJudging_Data\Managed\System.Xml.dll (this message is harmless)
+desktop: 1920x1200 59Hz; virtual: 3840x1200 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.049439 ms
+C:/Users/Ryan/AppData/LocalLow/Smiles/LisaHelper
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+received: 10.15.10.6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+got sever ip: 10.15.10.6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connected to: 10.15.10.6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ got SendCurDataRPC False  False  False False False False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+!!!!!!!!!!!!!! set judge data
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ Start receive 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: <?xml version="1.0" encoding="Windows-1252"?>
+<TournamentRootData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AllDivisions>
+    <DivisionData>
+      <Rounds>
+        <RoundData>
+          <Pools>
+            <PoolData>
+              <PoolName>A</PoolName>
+              <Teams />
+              <JudgersId>-1</JudgersId>
+              <ResultsByTeamIndex />
+            </PoolData>
+          </Pools>
+          <RoutineLengthMinutes>4</RoutineLengthMinutes>
+        </RoundData>
+        <RoundData>
+          <Pools>
+            <PoolData>
+              <PoolName>A</PoolName>
+              <Teams>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>4</NameId>
+                        <RankingPoints>162.15</RankingPoints>
+                        <Rank>164</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>43</NameId>
+                        <RankingPoints>477.5</RankingPoints>
+                        <Rank>57</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>639.65</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults>
+                        <DiffData>
+                          <JudgeNameId>68</JudgeNameId>
+                          <Division>Open</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>0</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>6</float>
+                            <float>0</float>
+                            <f
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: loat>5</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>5.5</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>6</float>
+                            <float>8.5</float>
+                            <float>4.5</float>
+                            <float>2.5</float>
+                            <float>2.5</float>
+                            <float>10</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>1</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>1</int>
+                            <int>1</int>
+                            <int>1</int>
+                            <int>1</int>
+                            <int>1</int>
+                            <int>1</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                      </DiffResults>
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+            
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:       <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>27</NameId>
+                        <RankingPoints>337.375</RankingPoints>
+                        <Rank>87</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>75</NameId>
+                        <RankingPoints>349.5</RankingPoints>
+                        <Rank>84</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>686.875</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults>
+                        <DiffData>
+                          <JudgeNameId>68</JudgeNameId>
+                          <Division>Open</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>1</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>1.5</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>1.5</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+             
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:                <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>1</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                      </DiffResults>
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>9</NameId>
+                        <RankingPoints>81.5</RankingPoints>
+                        <Rank>232</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>32</NameId>
+                        <RankingPoints>0</RankingPoints>
+                        <Rank>0</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>81.5</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <Ex
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: Results />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>8</NameId>
+                        <RankingPoints>961.4</RankingPoints>
+                        <Rank>20</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>52</NameId>
+                        <RankingPoints>1009.4</RankingPoints>
+                        <Rank>17</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1970.8</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults>
+                        <DiffData>
+                          <JudgeNameId>68</JudgeNameId>
+                          <Division>Open</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>3</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>0</float>
+                            <float>2</float>
+                            <float>0</float>
+                            <float>4</float>
+                            <float>0</float>
+                            <float>6</float>
+                            <float>0</float>
+                            <float>8</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+          
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:                   <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>1</int>
+                            <int>0</int>
+                            <int>1</int>
+                            <int>0</int>
+                            <int>1</int>
+                            <int>0</int>
+                            <int>1</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                      </DiffResults>
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>60</NameId>
+                        <RankingPoints>1269.5</RankingPoints>
+                        <Rank>11</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>14</NameId>
+                        <RankingPoints>1320.5</RankingPoints>
+                        <Rank>9</Rank>
+
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:                       </PlayerData>
+                    </Players>
+                    <TotalRankPoints>2590</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>15</NameId>
+                        <RankingPoints>1601.75</RankingPoints>
+                        <Rank>3</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>10</NameId>
+                        <RankingPoints>1686.75</RankingPoints>
+                        <Rank>1</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>3288.5</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>6</NameId>
+                        <RankingPoints>954.75</RankingPoints>
+                        <Rank>21</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>30</NameId>
+                        <RankingPoints>1017.9</RankingPoints>
+                        <Rank>15</Rank>
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: 
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1972.65</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults>
+                        <DiffData>
+                          <JudgeNameId>68</JudgeNameId>
+                          <Division>Open</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>6</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>2</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>1</int>
+                            <int>0</int>
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: 
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                      </DiffResults>
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>3</NameId>
+                        <RankingPoints>1151.5</RankingPoints>
+                        <Rank>12</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>26</NameId>
+                        <RankingPoints>1328.25</RankingPoints>
+                        <Rank>8</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>2479.75</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+              </Teams>
+              <JudgersId>0</JudgersId>
+              <ResultsByTeamIndex>
+                <int>0</int>
+                <int>3</int>
+                <int>1</int>
+                
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: <int>6</int>
+                <int>2</int>
+                <int>4</int>
+                <int>5</int>
+                <int>7</int>
+              </ResultsByTeamIndex>
+            </PoolData>
+            <PoolData>
+              <PoolName>B</PoolName>
+              <Teams>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>71</NameId>
+                        <RankingPoints>676.8</RankingPoints>
+                        <Rank>40</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>67</NameId>
+                        <RankingPoints>0</RankingPoints>
+                        <Rank>0</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>676.8</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>18</NameId>
+                        <RankingPoints>1093.5</RankingPoints>
+                        <Rank>13</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>1</NameId>
+                        <RankingPoints>242</RankingPoints>
+                        <Rank>111</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1335.5</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: </Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>28</NameId>
+                        <RankingPoints>422.75</RankingPoints>
+                        <Rank>68</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>29</NameId>
+                        <RankingPoints>526.375</RankingPoints>
+                        <Rank>51</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>949.125</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>25</NameId>
+                        <RankingPoints>521.45</RankingPoints>
+                        <Rank>52</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>20</NameId>
+                        <RankingPoints>692.8</RankingPoints>
+                        <Rank>38</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1214.25</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>62</NameId>
+                        <RankingPoints>1606.25</RankingPoints>
+                        <Rank>2</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>21</NameId>
+                        <RankingPoints>1015.25</RankingPoints>
+                        <Rank>16</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>2621.5</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>0</NameId>
+                        <RankingPoints>1520.75</RankingPoints>
+                        <Rank>4</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>63</NameId>
+                        <RankingPoints>1436.25</RankingPoints>
+                        <Rank>6</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>2957</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Roun
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: d>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>68</NameId>
+                        <RankingPoints>550.375</RankingPoints>
+                        <Rank>49</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>11</NameId>
+                        <RankingPoints>1443.75</RankingPoints>
+                        <Rank>5</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1994.125</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>50</NameId>
+                        <RankingPoints>1435</RankingPoints>
+                        <Rank>7</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>53</NameId>
+                        <RankingPoints>996.25</RankingPoints>
+                        <Rank>18</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>2431.25</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+              </Teams>
+              <JudgersId>1</JudgersId>
+              <ResultsByTeamIndex>
+                <int>0</int>
+                <int>1</int>
+                <int>2</int>
+                <int>3</int>
+                <int>4</int>
+                <int>5</int>
+                <int>6</int>
+                <int>7</int>
+              </ResultsByTeamIndex>
+            </PoolData>
+          </Pools>
+          <RoutineLengthMinutes>4</RoutineLengthMinutes>
+        </RoundData>
+        <RoundData>
+          <Pools>
+            <PoolData>
+              <PoolName>A</PoolName>
+              <Teams>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>73</NameId>
+                        <RankingPoints>421.95</RankingPoints>
+                        <Rank>69</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>44</NameId>
+                        <RankingPoints>440.65</RankingPoints>
+                        <Rank>60</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>862.6</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:      <PlayerData>
+                        <NameId>7</NameId>
+                        <RankingPoints>224.1</RankingPoints>
+                        <Rank>119</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>13</NameId>
+                        <RankingPoints>257.3</RankingPoints>
+                        <Rank>105</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>481.4</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>71</NameId>
+                        <RankingPoints>676.8</RankingPoints>
+                        <Rank>40</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>67</NameId>
+                        <RankingPoints>0</RankingPoints>
+                        <Rank>0</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>676.8</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: PlayerData>
+                        <NameId>15</NameId>
+                        <RankingPoints>1601.75</RankingPoints>
+                        <Rank>3</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>10</NameId>
+                        <RankingPoints>1686.75</RankingPoints>
+                        <Rank>1</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>3288.5</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>69</NameId>
+                        <RankingPoints>203</RankingPoints>
+                        <Rank>133</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>66</NameId>
+                        <RankingPoints>585</RankingPoints>
+                        <Rank>47</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>788</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <Play
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: erData>
+                        <NameId>8</NameId>
+                        <RankingPoints>961.4</RankingPoints>
+                        <Rank>20</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>52</NameId>
+                        <RankingPoints>1009.4</RankingPoints>
+                        <Rank>17</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1970.8</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>38</NameId>
+                        <RankingPoints>203.75</RankingPoints>
+                        <Rank>131</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>37</NameId>
+                        <RankingPoints>270.25</RankingPoints>
+                        <Rank>101</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>474</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <Pla
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: yerData>
+                        <NameId>6</NameId>
+                        <RankingPoints>954.75</RankingPoints>
+                        <Rank>21</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>30</NameId>
+                        <RankingPoints>1017.9</RankingPoints>
+                        <Rank>15</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1972.65</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+              </Teams>
+              <JudgersId>2</JudgersId>
+              <ResultsByTeamIndex>
+                <int>0</int>
+                <int>1</int>
+                <int>2</int>
+                <int>3</int>
+                <int>4</int>
+                <int>5</int>
+                <int>6</int>
+                <int>7</int>
+              </ResultsByTeamIndex>
+            </PoolData>
+            <PoolData>
+              <PoolName>B</PoolName>
+              <Teams>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>16</NameId>
+                        <RankingPoints>291.45</RankingPoints>
+                        <Rank>97</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>56</NameId>
+                        <RankingPoints>224.15</RankingPoints>
+                        <Rank>118</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>515.6</TotalRankPoints>
+                    <R
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: outineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>27</NameId>
+                        <RankingPoints>337.375</RankingPoints>
+                        <Rank>87</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>75</NameId>
+                        <RankingPoints>349.5</RankingPoints>
+                        <Rank>84</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>686.875</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>58</NameId>
+                        <RankingPoints>1053.75</RankingPoints>
+                        <Rank>14</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>57</NameId>
+                        <RankingPoints>381.45</RankingPoints>
+                        <Rank>74</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1435.2</TotalRankPoints>
+                
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:     <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>12</NameId>
+                        <RankingPoints>868</RankingPoints>
+                        <Rank>24</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>19</NameId>
+                        <RankingPoints>695.2</RankingPoints>
+                        <Rank>37</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1563.2</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>45</NameId>
+                        <RankingPoints>433.5</RankingPoints>
+                        <Rank>63</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>46</NameId>
+                        <RankingPoints>0</RankingPoints>
+                        <Rank>0</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>433.5</TotalRankPoints>
+                    <Rou
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: tineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>0</NameId>
+                        <RankingPoints>1520.75</RankingPoints>
+                        <Rank>4</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>63</NameId>
+                        <RankingPoints>1436.25</RankingPoints>
+                        <Rank>6</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>2957</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>28</NameId>
+                        <RankingPoints>422.75</RankingPoints>
+                        <Rank>68</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>29</NameId>
+                        <RankingPoints>526.375</RankingPoints>
+                        <Rank>51</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>949.125</TotalRankPoints>
+                    <
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>68</NameId>
+                        <RankingPoints>550.375</RankingPoints>
+                        <Rank>49</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>11</NameId>
+                        <RankingPoints>1443.75</RankingPoints>
+                        <Rank>5</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1994.125</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+              </Teams>
+              <JudgersId>3</JudgersId>
+              <ResultsByTeamIndex>
+                <int>0</int>
+                <int>1</int>
+                <int>2</int>
+                <int>3</int>
+                <int>4</int>
+                <int>5</int>
+                <int>6</int>
+                <int>7</int>
+              </ResultsByTeamIndex>
+            </PoolData>
+            <PoolData>
+              <PoolName>C</PoolName>
+              <Teams>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameI
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: d>24</NameId>
+                        <RankingPoints>0</RankingPoints>
+                        <Rank>0</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>40</NameId>
+                        <RankingPoints>229.125</RankingPoints>
+                        <Rank>115</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>229.125</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>50</NameId>
+                        <RankingPoints>1435</RankingPoints>
+                        <Rank>7</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>53</NameId>
+                        <RankingPoints>996.25</RankingPoints>
+                        <Rank>18</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>2431.25</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: >61</NameId>
+                        <RankingPoints>419</RankingPoints>
+                        <Rank>70</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>17</NameId>
+                        <RankingPoints>713</RankingPoints>
+                        <Rank>35</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1132</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>70</NameId>
+                        <RankingPoints>253.8</RankingPoints>
+                        <Rank>107</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>49</NameId>
+                        <RankingPoints>431.58</RankingPoints>
+                        <Rank>66</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>685.38</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>2</
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: NameId>
+                        <RankingPoints>334</RankingPoints>
+                        <Rank>89</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>35</NameId>
+                        <RankingPoints>217.55</RankingPoints>
+                        <Rank>122</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>551.55</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>9</NameId>
+                        <RankingPoints>81.5</RankingPoints>
+                        <Rank>232</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>32</NameId>
+                        <RankingPoints>0</RankingPoints>
+                        <Rank>0</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>81.5</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>62</NameId>
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: 
+                        <RankingPoints>1606.25</RankingPoints>
+                        <Rank>2</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>21</NameId>
+                        <RankingPoints>1015.25</RankingPoints>
+                        <Rank>16</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>2621.5</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>18</NameId>
+                        <RankingPoints>1093.5</RankingPoints>
+                        <Rank>13</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>1</NameId>
+                        <RankingPoints>242</RankingPoints>
+                        <Rank>111</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1335.5</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+              </Teams>
+              <JudgersId>4</JudgersId>
+              <ResultsByTeamIndex>
+                <int>0</int>
+                <int>1</int>
+          
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:       <int>2</int>
+                <int>3</int>
+                <int>4</int>
+                <int>5</int>
+                <int>6</int>
+                <int>7</int>
+              </ResultsByTeamIndex>
+            </PoolData>
+            <PoolData>
+              <PoolName>D</PoolName>
+              <Teams>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>4</NameId>
+                        <RankingPoints>162.15</RankingPoints>
+                        <Rank>164</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>43</NameId>
+                        <RankingPoints>477.5</RankingPoints>
+                        <Rank>57</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>639.65</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>60</NameId>
+                        <RankingPoints>1269.5</RankingPoints>
+                        <Rank>11</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>14</NameId>
+                        <RankingPoints>1320.5</RankingPoints>
+                        <Rank>9</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>2590</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Div
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: ision>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>41</NameId>
+                        <RankingPoints>41.28</RankingPoints>
+                        <Rank>325</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>42</NameId>
+                        <RankingPoints>44.58</RankingPoints>
+                        <Rank>312</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>85.86</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>3</NameId>
+                        <RankingPoints>1151.5</RankingPoints>
+                        <Rank>12</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>26</NameId>
+                        <RankingPoints>1328.25</RankingPoints>
+                        <Rank>8</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>2479.75</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>74</NameId>
+                        <RankingPoints>666.9</RankingPoints>
+                        <Rank>41</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>64</NameId>
+                        <RankingPoints>613.4</RankingPoints>
+                        <Rank>44</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1280.3</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>25</NameId>
+                        <RankingPoints>521.45</RankingPoints>
+                        <Rank>52</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>20</NameId>
+                        <RankingPoints>692.8</RankingPoints>
+                        <Rank>38</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1214.25</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: </Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>48</NameId>
+                        <RankingPoints>41.5625</RankingPoints>
+                        <Rank>324</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>55</NameId>
+                        <RankingPoints>171.5</RankingPoints>
+                        <Rank>160</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>213.0625</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+              </Teams>
+              <JudgersId>5</JudgersId>
+              <ResultsByTeamIndex>
+                <int>0</int>
+                <int>1</int>
+                <int>2</int>
+                <int>3</int>
+                <int>4</int>
+                <int>5</int>
+                <int>6</int>
+              </ResultsByTeamIndex>
+            </PoolData>
+          </Pools>
+          <RoutineLengthMinutes>3</RoutineLengthMinutes>
+        </RoundData>
+        <RoundData>
+          <Pools />
+          <RoutineLengthMinutes>0</RoutineLengthMinutes>
+        </RoundData>
+      </Rounds>
+    </DivisionData>
+    <DivisionData>
+      <Rounds>
+        <RoundData>
+       
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:    <Pools>
+            <PoolData>
+              <PoolName>A</PoolName>
+              <Teams />
+              <JudgersId>-1</JudgersId>
+              <ResultsByTeamIndex />
+            </PoolData>
+          </Pools>
+          <RoutineLengthMinutes>4</RoutineLengthMinutes>
+        </RoundData>
+        <RoundData>
+          <Pools>
+            <PoolData>
+              <PoolName>A</PoolName>
+              <Teams>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>38</NameId>
+                        <RankingPoints>203.75</RankingPoints>
+                        <Rank>131</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>39</NameId>
+                        <RankingPoints>30.375</RankingPoints>
+                        <Rank>370</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>234.125</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>67</NameId>
+                        <RankingPoints>0</RankingPoints>
+                        <Rank>0</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>54</NameId>
+                        <RankingPoints>370</RankingPoints>
+                        <Rank>77</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPo
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: ints>370</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>18</NameId>
+                        <RankingPoints>1093.5</RankingPoints>
+                        <Rank>13</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>7</NameId>
+                        <RankingPoints>224.1</RankingPoints>
+                        <Rank>119</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1317.6</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>31</NameId>
+                        <RankingPoints>11</RankingPoints>
+                        <Rank>434</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>30</NameId>
+                        <RankingPoints>1017.9</RankingPoints>
+                        <Rank>15</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoint
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: s>1028.9</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>59</NameId>
+                        <RankingPoints>22.5</RankingPoints>
+                        <Rank>392</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>14</NameId>
+                        <RankingPoints>1320.5</RankingPoints>
+                        <Rank>9</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1343</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>5</NameId>
+                        <RankingPoints>441.25</RankingPoints>
+                        <Rank>59</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>6</NameId>
+                        <RankingPoints>954.75</RankingPoints>
+                        <Rank>21</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: 1396</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>33</NameId>
+                        <RankingPoints>730.75</RankingPoints>
+                        <Rank>33</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>0</NameId>
+                        <RankingPoints>1520.75</RankingPoints>
+                        <Rank>4</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>2251.5</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+              </Teams>
+              <JudgersId>6</JudgersId>
+              <ResultsByTeamIndex>
+                <int>0</int>
+                <int>1</int>
+                <int>2</int>
+                <int>3</int>
+                <int>4</int>
+                <int>5</int>
+                <int>6</int>
+              </ResultsByTeamIndex>
+            </PoolData>
+            <PoolData>
+              <PoolName>B</PoolName>
+              <Teams>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                   
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:      <NameId>64</NameId>
+                        <RankingPoints>613.4</RankingPoints>
+                        <Rank>44</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>65</NameId>
+                        <RankingPoints>0</RankingPoints>
+                        <Rank>0</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>613.4</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>36</NameId>
+                        <RankingPoints>220.5</RankingPoints>
+                        <Rank>120</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>49</NameId>
+                        <RankingPoints>431.58</RankingPoints>
+                        <Rank>66</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>652.079956</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                   
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:      <NameId>51</NameId>
+                        <RankingPoints>168.75</RankingPoints>
+                        <Rank>161</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>19</NameId>
+                        <RankingPoints>695.2</RankingPoints>
+                        <Rank>37</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>863.95</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>2</NameId>
+                        <RankingPoints>334</RankingPoints>
+                        <Rank>89</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>53</NameId>
+                        <RankingPoints>996.25</RankingPoints>
+                        <Rank>18</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1330.25</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                  
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:       <NameId>22</NameId>
+                        <RankingPoints>497.35</RankingPoints>
+                        <Rank>53</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>26</NameId>
+                        <RankingPoints>1328.25</RankingPoints>
+                        <Rank>8</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1825.6</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>60</NameId>
+                        <RankingPoints>1269.5</RankingPoints>
+                        <Rank>11</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>34</NameId>
+                        <RankingPoints>766.5</RankingPoints>
+                        <Rank>29</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>2036</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+              </Teams>
+              <JudgersId>7</JudgersId>
+              <ResultsByTeamIndex>
+                <int>0</int>
+               
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:  <int>1</int>
+                <int>2</int>
+                <int>3</int>
+                <int>4</int>
+                <int>5</int>
+              </ResultsByTeamIndex>
+            </PoolData>
+          </Pools>
+          <RoutineLengthMinutes>4</RoutineLengthMinutes>
+        </RoundData>
+        <RoundData>
+          <Pools>
+            <PoolData>
+              <PoolName>A</PoolName>
+              <Teams />
+              <JudgersId>-1</JudgersId>
+              <ResultsByTeamIndex />
+            </PoolData>
+            <PoolData>
+              <PoolName>B</PoolName>
+              <Teams />
+              <JudgersId>-1</JudgersId>
+              <ResultsByTeamIndex />
+            </PoolData>
+            <PoolData>
+              <PoolName>C</PoolName>
+              <Teams />
+              <JudgersId>-1</JudgersId>
+              <ResultsByTeamIndex />
+            </PoolData>
+            <PoolData>
+              <PoolName>D</PoolName>
+              <Teams />
+              <JudgersId>-1</JudgersId>
+              <ResultsByTeamIndex />
+            </PoolData>
+          </Pools>
+          <RoutineLengthMinutes>0</RoutineLengthMinutes>
+        </RoundData>
+        <RoundData>
+          <Pools />
+          <RoutineLengthMinutes>0</RoutineLengthMinutes>
+        </RoundData>
+      </Rounds>
+    </DivisionData>
+    <DivisionData>
+      <Rounds>
+        <RoundData>
+          <Pools>
+            <PoolData>
+              <PoolName>A</PoolName>
+              <Teams />
+              <JudgersId>-1</JudgersId>
+              <ResultsByTeamIndex />
+            </PoolData>
+          </Pools>
+          <RoutineLengthMinutes>5</RoutineLengthMinutes>
+        </RoundData>
+        <RoundData>
+          <Pools>
+            <PoolData>
+              <PoolName>A</PoolName>
+              <Teams>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>41</NameId>
+                      
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:   <RankingPoints>41.28</RankingPoints>
+                        <Rank>325</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>42</NameId>
+                        <RankingPoints>44.58</RankingPoints>
+                        <Rank>312</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>43</NameId>
+                        <RankingPoints>477.5</RankingPoints>
+                        <Rank>57</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>563.36</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>73</NameId>
+                        <RankingPoints>421.95</RankingPoints>
+                        <Rank>69</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>44</NameId>
+                        <RankingPoints>440.65</RankingPoints>
+                        <Rank>60</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>57</NameId>
+                        <RankingPoints>381.45</RankingPoints>
+                        <Rank>74</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1244.05</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+           
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:            <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>75</NameId>
+                        <RankingPoints>349.5</RankingPoints>
+                        <Rank>84</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>19</NameId>
+                        <RankingPoints>695.2</RankingPoints>
+                        <Rank>37</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>27</NameId>
+                        <RankingPoints>337.375</RankingPoints>
+                        <Rank>87</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1382.075</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>34</NameId>
+                        <RankingPoints>766.5</RankingPoints>
+                        <Rank>29</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>66</NameId>
+                        <RankingPoints>585</RankingPoints>
+                        <Rank>47</Rank>
+                      </PlayerData>
+              
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:         <PlayerData>
+                        <NameId>22</NameId>
+                        <RankingPoints>497.35</RankingPoints>
+                        <Rank>53</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1848.85</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>64</NameId>
+                        <RankingPoints>613.4</RankingPoints>
+                        <Rank>44</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>45</NameId>
+                        <RankingPoints>433.5</RankingPoints>
+                        <Rank>63</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>20</NameId>
+                        <RankingPoints>692.8</RankingPoints>
+                        <Rank>38</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1739.7</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+            
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:           <PlayerData>
+                        <NameId>50</NameId>
+                        <RankingPoints>1435</RankingPoints>
+                        <Rank>7</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>49</NameId>
+                        <RankingPoints>431.58</RankingPoints>
+                        <Rank>66</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>53</NameId>
+                        <RankingPoints>996.25</RankingPoints>
+                        <Rank>18</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>2862.83</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>14</NameId>
+                        <RankingPoints>1320.5</RankingPoints>
+                        <Rank>9</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>58</NameId>
+                        <RankingPoints>1053.75</RankingPoints>
+                        <Rank>14</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>52</NameId>
+                        <RankingPoints>1009.4</RankingPoints>
+                        <Rank>17</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>3383.65</TotalRankPoints>
+                    <RoutineScores>
+               
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:        <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>62</NameId>
+                        <RankingPoints>1606.25</RankingPoints>
+                        <Rank>2</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>15</NameId>
+                        <RankingPoints>1601.75</RankingPoints>
+                        <Rank>3</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>10</NameId>
+                        <RankingPoints>1686.75</RankingPoints>
+                        <Rank>1</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>4894.75</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+              </Teams>
+              <JudgersId>8</JudgersId>
+              <ResultsByTeamIndex>
+                <int>0</int>
+                <int>1</int>
+                <int>2</int>
+                <int>3</int>
+                <int>4</int>
+                <int>5</int>
+                <int>6</int>
+                <int>7</int>
+              </ResultsByTeamIndex>
+            </PoolData>
+            <PoolData>
+              <PoolName>B</Poo
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: lName>
+              <Teams>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>67</NameId>
+                        <RankingPoints>0</RankingPoints>
+                        <Rank>0</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>28</NameId>
+                        <RankingPoints>422.75</RankingPoints>
+                        <Rank>68</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>29</NameId>
+                        <RankingPoints>526.375</RankingPoints>
+                        <Rank>51</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>949.125</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>61</NameId>
+                        <RankingPoints>419</RankingPoints>
+                        <Rank>70</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>25</NameId>
+                        <RankingPoints>521.45</RankingPoints>
+                        <Rank>52</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>48</NameId>
+                        <RankingPoints>41.5625</RankingPoints>
+                        <Rank>324</Rank>
+                      </PlayerData>
+                
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:     </Players>
+                    <TotalRankPoints>982.0125</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>60</NameId>
+                        <RankingPoints>1269.5</RankingPoints>
+                        <Rank>11</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>13</NameId>
+                        <RankingPoints>257.3</RankingPoints>
+                        <Rank>105</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>1</NameId>
+                        <RankingPoints>242</RankingPoints>
+                        <Rank>111</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1768.8</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>68</NameId>
+                        <RankingPoints>550.375</RankingPoints>
+                        <Rank>49</Rank>
+                      </PlayerData>
+            
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:           <PlayerData>
+                        <NameId>17</NameId>
+                        <RankingPoints>713</RankingPoints>
+                        <Rank>35</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>9</NameId>
+                        <RankingPoints>81.5</RankingPoints>
+                        <Rank>232</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1344.875</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>8</NameId>
+                        <RankingPoints>961.4</RankingPoints>
+                        <Rank>20</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>12</NameId>
+                        <RankingPoints>868</RankingPoints>
+                        <Rank>24</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>37</NameId>
+                        <RankingPoints>270.25</RankingPoints>
+                        <Rank>101</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>2099.65</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: >
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>74</NameId>
+                        <RankingPoints>666.9</RankingPoints>
+                        <Rank>41</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>18</NameId>
+                        <RankingPoints>1093.5</RankingPoints>
+                        <Rank>13</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>30</NameId>
+                        <RankingPoints>1017.9</RankingPoints>
+                        <Rank>15</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>2778.3</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>26</NameId>
+                        <RankingPoints>1328.25</RankingPoints>
+                        <Rank>8</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>3</NameId>
+                        <RankingPoints>1151.5</RankingPoints>
+                        <Rank>12</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>21</NameId>
+                        <RankingPoints>1015.25</RankingPoints>
+     
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:                    <Rank>16</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>3495</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>63</NameId>
+                        <RankingPoints>1436.25</RankingPoints>
+                        <Rank>6</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>0</NameId>
+                        <RankingPoints>1520.75</RankingPoints>
+                        <Rank>4</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>11</NameId>
+                        <RankingPoints>1443.75</RankingPoints>
+                        <Rank>5</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>4400.75</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+              </Teams>
+              <JudgersId>9</JudgersId>
+              <ResultsByTeamIndex>
+                <int>0</int>
+                <int>1</int>
+                <int>2</int>
+                <int>3</int>
+                <in
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: t>4</int>
+                <int>5</int>
+                <int>6</int>
+                <int>7</int>
+              </ResultsByTeamIndex>
+            </PoolData>
+          </Pools>
+          <RoutineLengthMinutes>5</RoutineLengthMinutes>
+        </RoundData>
+        <RoundData>
+          <Pools>
+            <PoolData>
+              <PoolName>A</PoolName>
+              <Teams>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>35</NameId>
+                        <RankingPoints>217.55</RankingPoints>
+                        <Rank>122</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>16</NameId>
+                        <RankingPoints>291.45</RankingPoints>
+                        <Rank>97</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>56</NameId>
+                        <RankingPoints>224.15</RankingPoints>
+                        <Rank>118</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>733.15</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+              </Teams>
+              <JudgersId>10</JudgersId>
+              <ResultsByTeamIndex>
+                <int>0</int>
+              </ResultsByTeamIndex>
+            </PoolData>
+            <PoolData>
+              <PoolName>B</PoolName>
+              <Teams />
+              <JudgersId>-1</JudgersId>
+              <ResultsByTeamIndex />
+            </PoolData>
+            <PoolData>
+  
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:             <PoolName>C</PoolName>
+              <Teams>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>24</NameId>
+                        <RankingPoints>0</RankingPoints>
+                        <Rank>0</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>4</NameId>
+                        <RankingPoints>162.15</RankingPoints>
+                        <Rank>164</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>40</NameId>
+                        <RankingPoints>229.125</RankingPoints>
+                        <Rank>115</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>391.275</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults />
+                      <AIResults />
+                      <DiffResults />
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+              </Teams>
+              <JudgersId>11</JudgersId>
+              <ResultsByTeamIndex>
+                <int>0</int>
+              </ResultsByTeamIndex>
+            </PoolData>
+            <PoolData>
+              <PoolName>D</PoolName>
+              <Teams />
+              <JudgersId>-1</JudgersId>
+              <ResultsByTeamIndex />
+            </PoolData>
+          </Pools>
+          <RoutineLengthMinutes>4</RoutineLengthMinutes>
+        </RoundData>
+        <RoundData>
+          <Pools />
+          <RoutineLengthMinutes>0</RoutineLengthMinutes>
+        </RoundData>
+      </Rounds>
+    </DivisionData>
+    <DivisionData>
+      <Rounds>
+        <RoundData>
+          <Pools>
+            <PoolData>
+
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:               <PoolName>A</PoolName>
+              <Teams />
+              <JudgersId>-1</JudgersId>
+              <ResultsByTeamIndex />
+            </PoolData>
+          </Pools>
+          <RoutineLengthMinutes>4</RoutineLengthMinutes>
+        </RoundData>
+        <RoundData>
+          <Pools>
+            <PoolData>
+              <PoolName>A</PoolName>
+              <Teams>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>47</NameId>
+                        <RankingPoints>356</RankingPoints>
+                        <Rank>81</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>51</NameId>
+                        <RankingPoints>168.75</RankingPoints>
+                        <Rank>161</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>524.75</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults>
+                        <ExData>
+                          <JudgeNameId>45</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>0</Team>
+                          <Point1Count>0</Point1Count>
+                          <Point2Count>0</Point2Count>
+                          <Point3Count>16</Point3Count>
+                          <Point5Count>0</Point5Count>
+                        </ExData>
+                        <ExData>
+                          <JudgeNameId>48</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>0</Team>
+                          <Point1Coun
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: t>1</Point1Count>
+                          <Point2Count>1</Point2Count>
+                          <Point3Count>15</Point3Count>
+                          <Point5Count>0</Point5Count>
+                        </ExData>
+                        <ExData>
+                          <JudgeNameId>70</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>0</Team>
+                          <Point1Count>1</Point1Count>
+                          <Point2Count>0</Point2Count>
+                          <Point3Count>16</Point3Count>
+                          <Point5Count>0</Point5Count>
+                        </ExData>
+                      </ExResults>
+                      <AIResults>
+                        <AIData>
+                          <JudgeNameId>12</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>0</Team>
+                          <Variety>5.5</Variety>
+                          <Teamwork>2</Teamwork>
+                          <Music>2</Music>
+                          <Flow>2.5</Flow>
+                          <Form>4</Form>
+                          <General>3</General>
+                        </AIData>
+                        <AIData>
+                          <JudgeNameId>49</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>0</Team>
+                          <Variety>4</Variety>
+                          <Teamwork>2.5</Teamwork>
+                          <Music>2</Music>
+                          <Flow>3</Flow>
+                          <Form>3.5</Form>
+                          <General>4</General>
+                        </AIData>
+                      
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:   <AIData>
+                          <JudgeNameId>61</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>0</Team>
+                          <Variety>3.5</Variety>
+                          <Teamwork>4</Teamwork>
+                          <Music>1.5</Music>
+                          <Flow>2</Flow>
+                          <Form>2</Form>
+                          <General>2.5</General>
+                        </AIData>
+                      </AIResults>
+                      <DiffResults>
+                        <DiffData>
+                          <JudgeNameId>64</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>0</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>4</float>
+                            <float>4.5</float>
+                            <float>4</float>
+                            <float>3</float>
+                            <float>4.5</float>
+                            <float>5</float>
+                            <float>5</float>
+                            <float>3</float>
+                            <float>3</float>
+                            <float>3</float>
+                            <float>5.5</float>
+                            <float>5</float>
+                            <float>5</float>
+                            <float>5</float>
+                            <float>4</float>
+                            <float>4</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+              
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:               <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                        <DiffData>
+                          <JudgeNameId>17</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>0</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>3.5</float>
+                            <float>4</float>
+                            <float>3.5</float>
+                            <float>3</float>
+                            <float>4.5</float>
+                            <float>4</float>
+                            <float>4</float>
+                            <float>2</float>
+                            <float>2.5</float>
+                            <float>3</float>
+                            <float>5.5</float>
+                            <float>4</float>
+                            <float>4.5</float>
+                            <float>5</float>
+                            <float>4.5</float>
+                            <float>4</float>
+               
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:              <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                        <DiffData>
+                          <JudgeNameId>10</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>0</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>3</float>
+                            <float>4</float>
+                            <float>4</float>
+                            <float>3.5</float>
+                            <float>4</float>
+                            <float>4.5</float>
+                            <float>4</float>
+                            <float>3.5</float>
+                            <float>2.5</float>
+                            <float>2.5</float>
+                            <
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: float>5</float>
+                            <float>3.5</float>
+                            <float>4.5</float>
+                            <float>6</float>
+                            <float>4</float>
+                            <float>4</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                      </DiffResults>
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>2</NameId>
+                        <RankingPoints>334</RankingPoints>
+                        <Rank>89</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>7</NameId>
+                        <Rankin
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: gPoints>224.1</RankingPoints>
+                        <Rank>119</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>558.1</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults>
+                        <ExData>
+                          <JudgeNameId>45</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>1</Team>
+                          <Point1Count>1</Point1Count>
+                          <Point2Count>2</Point2Count>
+                          <Point3Count>4</Point3Count>
+                          <Point5Count>0</Point5Count>
+                        </ExData>
+                        <ExData>
+                          <JudgeNameId>48</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>1</Team>
+                          <Point1Count>1</Point1Count>
+                          <Point2Count>2</Point2Count>
+                          <Point3Count>4</Point3Count>
+                          <Point5Count>0</Point5Count>
+                        </ExData>
+                        <ExData>
+                          <JudgeNameId>70</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>1</Team>
+                          <Point1Count>1</Point1Count>
+                          <Point2Count>1</Point2Count>
+                          <Point3Count>4</Point3Count>
+                          <Point5Count>0</Point5Count>
+                        </ExData>
+                      </ExResults>
+                   
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:    <AIResults>
+                        <AIData>
+                          <JudgeNameId>12</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>1</Team>
+                          <Variety>7</Variety>
+                          <Teamwork>5</Teamwork>
+                          <Music>6</Music>
+                          <Flow>4.5</Flow>
+                          <Form>5.5</Form>
+                          <General>5.5</General>
+                        </AIData>
+                        <AIData>
+                          <JudgeNameId>49</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>1</Team>
+                          <Variety>5</Variety>
+                          <Teamwork>5</Teamwork>
+                          <Music>5</Music>
+                          <Flow>5.5</Flow>
+                          <Form>5</Form>
+                          <General>6</General>
+                        </AIData>
+                        <AIData>
+                          <JudgeNameId>61</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>1</Team>
+                          <Variety>5</Variety>
+                          <Teamwork>5.5</Teamwork>
+                          <Music>3</Music>
+                          <Flow>4</Flow>
+                          <Form>4</Form>
+                          <General>4.5</General>
+                        </AIData>
+                      </AIResults>
+                      <DiffResults>
+                        <DiffData>
+                          <JudgeNameId>64</JudgeNameId>
+                          <Division>Women</Division>
+                          <
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>1</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>3</float>
+                            <float>3</float>
+                            <float>3</float>
+                            <float>5</float>
+                            <float>4</float>
+                            <float>5</float>
+                            <float>4</float>
+                            <float>4.5</float>
+                            <float>3</float>
+                            <float>4</float>
+                            <float>5</float>
+                            <float>6</float>
+                            <float>5</float>
+                            <float>4.5</float>
+                            <float>5</float>
+                            <float>4.5</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</in
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: t>
+                          </ConsecScores>
+                        </DiffData>
+                        <DiffData>
+                          <JudgeNameId>17</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>1</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>3.5</float>
+                            <float>1</float>
+                            <float>3</float>
+                            <float>4.5</float>
+                            <float>2.5</float>
+                            <float>4.5</float>
+                            <float>3.5</float>
+                            <float>4</float>
+                            <float>4</float>
+                            <float>4.5</float>
+                            <float>5</float>
+                            <float>5.5</float>
+                            <float>4.5</float>
+                            <float>4.5</float>
+                            <float>5</float>
+                            <float>4</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                    
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:         <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                        <DiffData>
+                          <JudgeNameId>10</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>1</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>4</float>
+                            <float>2</float>
+                            <float>3</float>
+                            <float>4</float>
+                            <float>3</float>
+                            <float>5</float>
+                            <float>4.5</float>
+                            <float>4</float>
+                            <float>4</float>
+                            <float>4</float>
+                            <float>4.5</float>
+                            <float>6</float>
+                            <float>4</float>
+                            <float>4</float>
+                            <float>4</float>
+                            <float>3.5</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+              
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:               <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                      </DiffResults>
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>33</NameId>
+                        <RankingPoints>730.75</RankingPoints>
+                        <Rank>33</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>36</NameId>
+                        <RankingPoints>220.5</RankingPoints>
+                        <Rank>120</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>951.25</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults>
+                        <ExData>
+                          <JudgeNameId>45</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>2</Team>
+                          <Point1Count>2</Point1Count>
+                          <Point2Count>0</Point2Count>
+                          <Point3Count>8</Point3Count>
+
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:                           <Point5Count>0</Point5Count>
+                        </ExData>
+                        <ExData>
+                          <JudgeNameId>48</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>2</Team>
+                          <Point1Count>1</Point1Count>
+                          <Point2Count>1</Point2Count>
+                          <Point3Count>8</Point3Count>
+                          <Point5Count>0</Point5Count>
+                        </ExData>
+                        <ExData>
+                          <JudgeNameId>70</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>2</Team>
+                          <Point1Count>1</Point1Count>
+                          <Point2Count>0</Point2Count>
+                          <Point3Count>8</Point3Count>
+                          <Point5Count>0</Point5Count>
+                        </ExData>
+                      </ExResults>
+                      <AIResults>
+                        <AIData>
+                          <JudgeNameId>12</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>2</Team>
+                          <Variety>9</Variety>
+                          <Teamwork>7.5</Teamwork>
+                          <Music>7</Music>
+                          <Flow>7</Flow>
+                          <Form>7</Form>
+                          <General>7.5</General>
+                        </AIData>
+                        <AIData>
+                          <JudgeNameId>49</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+           
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:                <Pool>0</Pool>
+                          <Team>2</Team>
+                          <Variety>6</Variety>
+                          <Teamwork>6.5</Teamwork>
+                          <Music>5</Music>
+                          <Flow>6.5</Flow>
+                          <Form>5.5</Form>
+                          <General>7</General>
+                        </AIData>
+                        <AIData>
+                          <JudgeNameId>61</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>2</Team>
+                          <Variety>6.5</Variety>
+                          <Teamwork>7</Teamwork>
+                          <Music>3</Music>
+                          <Flow>6</Flow>
+                          <Form>6.5</Form>
+                          <General>6</General>
+                        </AIData>
+                      </AIResults>
+                      <DiffResults>
+                        <DiffData>
+                          <JudgeNameId>64</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>2</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>4</float>
+                            <float>4.5</float>
+                            <float>5.5</float>
+                            <float>5</float>
+                            <float>3.5</float>
+                            <float>6</float>
+                            <float>6</float>
+                            <float>5</float>
+                            <float>5.5</float>
+                            <float>5.5</float>
+                            <float>4.5</float>
+                            <float>6</float>
+                            <float>6</float>
+     
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:                        <float>7</float>
+                            <float>5.5</float>
+                            <float>4.5</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                        <DiffData>
+                          <JudgeNameId>17</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>2</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>5</float>
+                            <float>4</float>
+                            <float>6.5</float>
+                            <float>4</float>
+                            <float>3</float>
+                            <float>5</float>
+                            <float>5.5</float>
+                     
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:        <float>6</float>
+                            <float>5</float>
+                            <float>5</float>
+                            <float>4.5</float>
+                            <float>5</float>
+                            <float>6</float>
+                            <float>5</float>
+                            <float>5</float>
+                            <float>3.5</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                        <DiffData>
+                          <JudgeNameId>10</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>2</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>5</float>
+                            <float>4</flo
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: at>
+                            <float>6.5</float>
+                            <float>4</float>
+                            <float>3</float>
+                            <float>5</float>
+                            <float>5.5</float>
+                            <float>6</float>
+                            <float>5</float>
+                            <float>5</float>
+                            <float>4.5</float>
+                            <float>5</float>
+                            <float>6</float>
+                            <float>5</float>
+                            <float>5</float>
+                            <float>4</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                      </DiffResults>
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>22</NameId>
+                        <RankingPoints>497.35</RankingPoints>
+                        <Rank>53</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>54</NameId>
+                        <RankingPoints>370</RankingPoints>
+                        <Rank>77</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>867.35</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults>
+                        <ExData>
+                          <JudgeNameId>45</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>3</Team>
+                          <Point1Count>3</Point1Count>
+                          <Point2Count>1</Point2Count>
+                          <Point3Count>8</Point3Count>
+                          <Point5Count>0</Point5Count>
+                        </ExData>
+                        <ExData>
+                          <JudgeNameId>48</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>3</Team>
+                          <Point1Count>3</Point1Count>
+                          <Point2Count>1</Point2Count>
+                          <Point3Count>8</Point3Count>
+                          <Point5Count>0</Point5Count>
+                        </ExData>
+                        <ExData>
+                          <JudgeNameId>70</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals<
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: /Round>
+                          <Pool>0</Pool>
+                          <Team>3</Team>
+                          <Point1Count>3</Point1Count>
+                          <Point2Count>1</Point2Count>
+                          <Point3Count>8</Point3Count>
+                          <Point5Count>0</Point5Count>
+                        </ExData>
+                      </ExResults>
+                      <AIResults>
+                        <AIData>
+                          <JudgeNameId>12</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>3</Team>
+                          <Variety>6.5</Variety>
+                          <Teamwork>7.5</Teamwork>
+                          <Music>6.5</Music>
+                          <Flow>6.5</Flow>
+                          <Form>7</Form>
+                          <General>6.5</General>
+                        </AIData>
+                        <AIData>
+                          <JudgeNameId>49</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>3</Team>
+                          <Variety>6.5</Variety>
+                          <Teamwork>5.5</Teamwork>
+                          <Music>5.5</Music>
+                          <Flow>6</Flow>
+                          <Form>5.5</Form>
+                          <General>6.5</General>
+                        </AIData>
+                        <AIData>
+                          <JudgeNameId>61</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>3</Team>
+                          <Variety>5.5</Variety>
+                          <Teamwork>6.5</Teamwork>
+                          <Music>5</Mus
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: ic>
+                          <Flow>5.5</Flow>
+                          <Form>6</Form>
+                          <General>5.5</General>
+                        </AIData>
+                      </AIResults>
+                      <DiffResults>
+                        <DiffData>
+                          <JudgeNameId>64</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>3</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>4.5</float>
+                            <float>5.5</float>
+                            <float>5</float>
+                            <float>4.5</float>
+                            <float>5</float>
+                            <float>4</float>
+                            <float>4</float>
+                            <float>3.5</float>
+                            <float>5.5</float>
+                            <float>4.5</float>
+                            <float>4</float>
+                            <float>5.5</float>
+                            <float>5</float>
+                            <float>4</float>
+                            <float>5</float>
+                            <float>2.5</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                         
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:    <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                        <DiffData>
+                          <JudgeNameId>17</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>3</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>4</float>
+                            <float>2.5</float>
+                            <float>4</float>
+                            <float>4</float>
+                            <float>4.5</float>
+                            <float>4.5</float>
+                            <float>4</float>
+                            <float>4.5</float>
+                            <float>4</float>
+                            <float>4.5</float>
+                            <float>4.5</float>
+                            <float>5.5</float>
+                            <float>4.5</float>
+                            <float>4</float>
+                            <float>4</float>
+                            <float>3.5</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+       
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:                      <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                        <DiffData>
+                          <JudgeNameId>10</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>3</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>4</float>
+                            <float>1.5</float>
+                            <float>3</float>
+                            <float>4</float>
+                            <float>4.5</float>
+                            <float>3.5</float>
+                            <float>4</float>
+                            <float>2.5</float>
+                            <float>4.5</float>
+                            <float>4.5</float>
+                            <float>4.5</float>
+                            <float>5</float>
+                            <float>4</float>
+                            <float>4.5</float>
+                            <float>5</float>
+                            <float>4</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</fl
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: oat>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>1</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                      </DiffResults>
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+                <TeamDataDisplay>
+                  <Data>
+                    <Players>
+                      <PlayerData>
+                        <NameId>5</NameId>
+                        <RankingPoints>441.25</RankingPoints>
+                        <Rank>59</Rank>
+                      </PlayerData>
+                      <PlayerData>
+                        <NameId>34</NameId>
+                        <RankingPoints>766.5</RankingPoints>
+                        <Rank>29</Rank>
+                      </PlayerData>
+                    </Players>
+                    <TotalRankPoints>1207.75</TotalRankPoints>
+                    <RoutineScores>
+                      <Division>Open</Division>
+                      <Round>Finals</Round>
+                      <ExResults>
+        
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:                 <ExData>
+                          <JudgeNameId>45</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>4</Team>
+                          <Point1Count>1</Point1Count>
+                          <Point2Count>2</Point2Count>
+                          <Point3Count>5</Point3Count>
+                          <Point5Count>0</Point5Count>
+                        </ExData>
+                        <ExData>
+                          <JudgeNameId>48</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>4</Team>
+                          <Point1Count>0</Point1Count>
+                          <Point2Count>2</Point2Count>
+                          <Point3Count>5</Point3Count>
+                          <Point5Count>0</Point5Count>
+                        </ExData>
+                        <ExData>
+                          <JudgeNameId>70</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>4</Team>
+                          <Point1Count>3</Point1Count>
+                          <Point2Count>1</Point2Count>
+                          <Point3Count>5</Point3Count>
+                          <Point5Count>0</Point5Count>
+                        </ExData>
+                      </ExResults>
+                      <AIResults>
+                        <AIData>
+                          <JudgeNameId>12</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>4</Team>
+                          <Variety>8</Variety>
+                          <Teamw
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: ork>8.5</Teamwork>
+                          <Music>7</Music>
+                          <Flow>8</Flow>
+                          <Form>7.5</Form>
+                          <General>8</General>
+                        </AIData>
+                        <AIData>
+                          <JudgeNameId>49</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>4</Team>
+                          <Variety>7</Variety>
+                          <Teamwork>7</Teamwork>
+                          <Music>6</Music>
+                          <Flow>7.5</Flow>
+                          <Form>7</Form>
+                          <General>8</General>
+                        </AIData>
+                        <AIData>
+                          <JudgeNameId>61</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>4</Team>
+                          <Variety>5.5</Variety>
+                          <Teamwork>7</Teamwork>
+                          <Music>5</Music>
+                          <Flow>6.5</Flow>
+                          <Form>5.5</Form>
+                          <General>7</General>
+                        </AIData>
+                      </AIResults>
+                      <DiffResults>
+                        <DiffData>
+                          <JudgeNameId>64</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>4</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>4</float>
+                            <float>5</float>
+                            <float>5</float>
+                            <float>5.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: 5</float>
+                            <float>5.5</float>
+                            <float>5</float>
+                            <float>5.5</float>
+                            <float>7</float>
+                            <float>6</float>
+                            <float>6</float>
+                            <float>4.5</float>
+                            <float>4</float>
+                            <float>5</float>
+                            <float>5</float>
+                            <float>5.5</float>
+                            <float>5</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                        <DiffData>
+                          <JudgeNameId>17</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>4</Team>
+      
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:                     <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>5.5</float>
+                            <float>4.5</float>
+                            <float>4.5</float>
+                            <float>5</float>
+                            <float>6</float>
+                            <float>5.5</float>
+                            <float>6</float>
+                            <float>4</float>
+                            <float>4.5</float>
+                            <float>6.5</float>
+                            <float>5.5</float>
+                            <float>4.5</float>
+                            <float>5</float>
+                            <float>6</float>
+                            <float>4.5</float>
+                            <float>4.5</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                  
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial:       <DiffData>
+                          <JudgeNameId>10</JudgeNameId>
+                          <Division>Women</Division>
+                          <Round>Semifinals</Round>
+                          <Pool>0</Pool>
+                          <Team>4</Team>
+                          <NumScores>16</NumScores>
+                          <DiffScores>
+                            <float>5.5</float>
+                            <float>5</float>
+                            <float>4</float>
+                            <float>6</float>
+                            <float>6.5</float>
+                            <float>5.5</float>
+                            <float>7.5</float>
+                            <float>2.5</float>
+                            <float>4.5</float>
+                            <float>7</float>
+                            <float>4.5</float>
+                            <float>3.5</float>
+                            <float>4.5</float>
+                            <float>6</float>
+                            <float>6</float>
+                            <float>5.5</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                            <float>0</float>
+                          </DiffScores>
+                          <ConsecScores>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                            <int>0</int>
+                          </ConsecScores>
+                        </DiffData>
+                      </DiffResults>
+                    </RoutineScores>
+                  </Data>
+                  <bClickedOn>false</bClickedOn>
+                </TeamDataDisplay>
+              </Teams>
+              <JudgersId>12</JudgersId>
+              <ResultsByTeamIndex>
+                <int>4</int>
+                <int>2</int>
+                <int>3</int>
+                <int>1</int>
+                <int>0</int>
+              </ResultsByTeamIndex>
+            </PoolData>
+            <PoolData>
+              <PoolName>B</PoolName>
+              <Teams />
+              <JudgersId>-1</JudgersId>
+              <ResultsByTeamIndex />
+            </PoolData>
+          </Pools>
+          <RoutineLengthMinutes>4</RoutineLengthMinutes>
+        </RoundData>
+        <RoundData>
+          <Pools>
+            <PoolData>
+              <PoolName>A</PoolName>
+              <Teams />
+              <JudgersId>-1</JudgersId>
+              <ResultsByTeamIndex />
+            </PoolData>
+            <PoolData>
+              <PoolName>B</PoolName>
+              <Teams />
+              <JudgersId>-1</JudgersId>
+              <ResultsByTeamIndex />
+            </PoolData>
+            <PoolData>
+              <PoolName>C</PoolName>
+              <Teams />
+              <JudgersId>-1</JudgersId>
+              <ResultsByTeamIndex />
+            </PoolData>
+            <PoolData>
+              <PoolName>D</PoolName>
+              <Teams />
+              <JudgersId>-1</JudgersId>
+              <ResultsByTeamIndex />
+            </PoolData>
+          </Pools>
+          <RoutineLengthMinutes>0</RoutineLengthMinutes>
+        </RoundData>
+        <RoundData>
+          <Pools />
+          <RoutineLengthMinutes>0</RoutineLengthMinutes
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: >
+        </RoundData>
+      </Rounds>
+    </DivisionData>
+  </AllDivisions>
+  <JudgeList>
+    <JudgeData>
+      <Id>0</Id>
+      <Division>Open</Division>
+      <Round>Semifinals</Round>
+      <Pool>0</Pool>
+      <AIJudgeIds>
+        <int>63</int>
+        <int>11</int>
+        <int>62</int>
+      </AIJudgeIds>
+      <ExJudgeIds>
+        <int>53</int>
+        <int>29</int>
+        <int>33</int>
+      </ExJudgeIds>
+      <DiffJudgeIds>
+        <int>68</int>
+        <int>0</int>
+        <int>25</int>
+      </DiffJudgeIds>
+    </JudgeData>
+    <JudgeData>
+      <Id>1</Id>
+      <Division>Open</Division>
+      <Round>Semifinals</Round>
+      <Pool>1</Pool>
+      <AIJudgeIds>
+        <int>10</int>
+        <int>8</int>
+        <int>26</int>
+      </AIJudgeIds>
+      <ExJudgeIds>
+        <int>4</int>
+        <int>32</int>
+        <int>14</int>
+      </ExJudgeIds>
+      <DiffJudgeIds>
+        <int>30</int>
+        <int>6</int>
+        <int>15</int>
+      </DiffJudgeIds>
+    </JudgeData>
+    <JudgeData>
+      <Id>2</Id>
+      <Division>Open</Division>
+      <Round>Quaterfinals</Round>
+      <Pool>0</Pool>
+      <AIJudgeIds>
+        <int>0</int>
+        <int>58</int>
+        <int>64</int>
+      </AIJudgeIds>
+      <ExJudgeIds>
+        <int>46</int>
+        <int>41</int>
+        <int>4</int>
+      </ExJudgeIds>
+      <DiffJudgeIds>
+        <int>26</int>
+        <int>14</int>
+        <int>19</int>
+      </DiffJudgeIds>
+    </JudgeData>
+    <JudgeData>
+      <Id>3</Id>
+      <Division>Open</Division>
+      <Round>Quaterfinals</Round>
+      <Pool>1</Pool>
+      <AIJudgeIds>
+        <int>10</int>
+        <int>18</int>
+        <int>5</int>
+      </AIJudgeIds>
+      <ExJudgeIds>
+        <int>44</int>
+        <int>61</int>
+        <int>15</int>
+      </ExJudgeIds>
+      <DiffJudgeIds>
+        <int>62</int>
+        <int>50</int>
+        <int>21</int>
+      </DiffJudgeIds>
+    </JudgeData>
+    <JudgeData>
+      <Id>4</Id>
+      <Division>Ope
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: n</Division>
+      <Round>Quaterfinals</Round>
+      <Pool>2</Pool>
+      <AIJudgeIds>
+        <int>11</int>
+        <int>45</int>
+        <int>20</int>
+      </AIJudgeIds>
+      <ExJudgeIds>
+        <int>72</int>
+        <int>67</int>
+        <int>5</int>
+      </ExJudgeIds>
+      <DiffJudgeIds>
+        <int>63</int>
+        <int>68</int>
+        <int>25</int>
+      </DiffJudgeIds>
+    </JudgeData>
+    <JudgeData>
+      <Id>5</Id>
+      <Division>Open</Division>
+      <Round>Quaterfinals</Round>
+      <Pool>3</Pool>
+      <AIJudgeIds>
+        <int>30</int>
+        <int>53</int>
+        <int>52</int>
+      </AIJudgeIds>
+      <ExJudgeIds>
+        <int>75</int>
+        <int>27</int>
+        <int>70</int>
+      </ExJudgeIds>
+      <DiffJudgeIds>
+        <int>17</int>
+        <int>49</int>
+        <int>8</int>
+      </DiffJudgeIds>
+    </JudgeData>
+    <JudgeData>
+      <Id>6</Id>
+      <Division>Mixed</Division>
+      <Round>Semifinals</Round>
+      <Pool>0</Pool>
+      <AIJudgeIds>
+        <int>62</int>
+        <int>20</int>
+        <int>11</int>
+      </AIJudgeIds>
+      <ExJudgeIds>
+        <int>61</int>
+        <int>44</int>
+        <int>17</int>
+      </ExJudgeIds>
+      <DiffJudgeIds>
+        <int>63</int>
+        <int>1</int>
+        <int>10</int>
+      </DiffJudgeIds>
+    </JudgeData>
+    <JudgeData>
+      <Id>7</Id>
+      <Division>Mixed</Division>
+      <Round>Semifinals</Round>
+      <Pool>1</Pool>
+      <AIJudgeIds>
+        <int>15</int>
+        <int>71</int>
+        <int>45</int>
+      </AIJudgeIds>
+      <ExJudgeIds>
+        <int>58</int>
+        <int>29</int>
+        <int>16</int>
+      </ExJudgeIds>
+      <DiffJudgeIds>
+        <int>21</int>
+        <int>25</int>
+        <int>12</int>
+      </DiffJudgeIds>
+    </JudgeData>
+    <JudgeData>
+      <Id>8</Id>
+      <Division>Coop</Division>
+      <Round>Semifinals</Round>
+      <Pool>0</Pool>
+      <AIJudgeIds>
+        <int>9</int>
+        <int>18</int>
+        <in
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: t>21</int>
+      </AIJudgeIds>
+      <ExJudgeIds>
+        <int>29</int>
+        <int>61</int>
+        <int>1</int>
+      </ExJudgeIds>
+      <DiffJudgeIds>
+        <int>17</int>
+        <int>26</int>
+        <int>12</int>
+      </DiffJudgeIds>
+    </JudgeData>
+    <JudgeData>
+      <Id>9</Id>
+      <Division>Coop</Division>
+      <Round>Semifinals</Round>
+      <Pool>1</Pool>
+      <AIJudgeIds>
+        <int>15</int>
+        <int>53</int>
+        <int>50</int>
+      </AIJudgeIds>
+      <ExJudgeIds>
+        <int>43</int>
+        <int>49</int>
+        <int>27</int>
+      </ExJudgeIds>
+      <DiffJudgeIds>
+        <int>14</int>
+        <int>64</int>
+        <int>19</int>
+      </DiffJudgeIds>
+    </JudgeData>
+    <JudgeData>
+      <Id>10</Id>
+      <Division>Coop</Division>
+      <Round>Quaterfinals</Round>
+      <Pool>0</Pool>
+      <AIJudgeIds>
+        <int>15</int>
+        <int>26</int>
+        <int>49</int>
+      </AIJudgeIds>
+      <ExJudgeIds>
+        <int>50</int>
+        <int>18</int>
+        <int>38</int>
+      </ExJudgeIds>
+      <DiffJudgeIds>
+        <int>10</int>
+        <int>0</int>
+        <int>11</int>
+      </DiffJudgeIds>
+    </JudgeData>
+    <JudgeData>
+      <Id>11</Id>
+      <Division>Coop</Division>
+      <Round>Quaterfinals</Round>
+      <Pool>2</Pool>
+      <AIJudgeIds>
+        <int>14</int>
+        <int>30</int>
+        <int>21</int>
+      </AIJudgeIds>
+      <ExJudgeIds>
+        <int>55</int>
+        <int>22</int>
+        <int>34</int>
+      </ExJudgeIds>
+      <DiffJudgeIds>
+        <int>62</int>
+        <int>63</int>
+        <int>53</int>
+      </DiffJudgeIds>
+    </JudgeData>
+    <JudgeData>
+      <Id>12</Id>
+      <Division>Women</Division>
+      <Round>Semifinals</Round>
+      <Pool>0</Pool>
+      <AIJudgeIds>
+        <int>12</int>
+        <int>49</int>
+        <int>61</int>
+      </AIJudgeIds>
+      <ExJudgeIds>
+        <int>45</int>
+        <int>48</int>
+        <int>70</int>
+      </ExJudgeIds>
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ parial: 
+      <DiffJudgeIds>
+        <int>64</int>
+        <int>17</int>
+        <int>10</int>
+      </DiffJudgeIds>
+    </JudgeData>
+  </JudgeList>
+</TournamentRootData>
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ Start receive 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ got SendCurDataRPC True  True  True False False False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ got SendCurDataRPC False  True  True False False False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+!!!!!!!!!!!!!! set judge data
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ got SendCurDataRPC True  True  True False False False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ got SendCurDataRPC False  True  True False False False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+!!!!!!!!!!!!!! set judge data
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ got SendCurDataRPC True  True  True False False False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ got SendCurDataRPC False  True  True False False False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+!!!!!!!!!!!!!! set judge data
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ got SendCurDataRPC True  True  True False False False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ got SendCurDataRPC False  False  False False False False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+!!!!!!!!!!!!!! set judge data
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ got SendCurDataRPC False  False  False False False False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+!!!!!!!!!!!!!! set judge data
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The server has disconnected from the client. Most likely the server has shut down.
+ 
+(Filename:  Line: 776)
+
+ disconnected network: 10.15.10.6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 106c -> priority: 1 
+  Thread -> id: 222c -> priority: 1 
+  Thread -> id: 1f80 -> priority: 1 
+  Thread -> id: 38d8 -> priority: 1 
+Destroying speech
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+

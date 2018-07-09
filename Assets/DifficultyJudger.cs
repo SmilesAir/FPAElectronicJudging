@@ -180,7 +180,7 @@ public class DifficultyJudger : JudgerBase
 
 					if (GUI.Button(new Rect(Screen.width * .07f, Screen.height * .25f, Screen.width * .3f, Screen.height * .1f), "Send Backup Data"))
 					{
-						SendResultsToHeadJudger((int)CurData.Division, (int)CurData.Round, CurData.Pool, CurData.Team);
+						SendResultsToHeadJudger((int)CurData.Division, (int)CurData.Round, (int)CurData.Pool, CurData.Team);
 
 						bInputingConsec = false;
 					}
@@ -350,10 +350,10 @@ public class DifficultyJudger : JudgerBase
 	{
 		base.SendResultsToHeadJudger(InDiv, InRound, InPool, InTeam);
 
-		RoutineScoreData SData = Global.AllData.AllDivisions[InDiv].Rounds[InRound].Pools[CurPool].Teams[InTeam].Data.RoutineScores;
+		RoutineScoreData SData = Global.AllData.AllDivisions[InDiv].Rounds[InRound].Pools[(int)CurPool].Teams[InTeam].Data.RoutineScores;
 		CurData.Division = (EDivision)InDiv;
 		CurData.Round = (ERound)InRound;
-		CurData.Pool = InPool;
+		CurData.Pool = (EPool)InPool;
 		CurData.Team = InTeam;
 		CurData.JudgeNameId = GetJudgeNameId();
 		SData.SetDiffResults(CurData);
@@ -380,11 +380,11 @@ public class DifficultyJudger : JudgerBase
 
 	public override void StartEditingTeam(int InTeamIndex)
 	{
-		if (Global.AllData == null || CurPool < 0 || CurPool >= Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools.Count ||
-			InTeamIndex < 0 || InTeamIndex >= Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[CurPool].Teams.Count)
+		if (Global.AllData == null || CurPool == EPool.None || (int)CurPool >= Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools.Count ||
+			InTeamIndex < 0 || InTeamIndex >= Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[(int)CurPool].Teams.Count)
 			return;
 
-		RoutineScoreData SData = Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[CurPool].Teams[InTeamIndex].Data.RoutineScores;
+		RoutineScoreData SData = Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[(int)CurPool].Teams[InTeamIndex].Data.RoutineScores;
 
 		if (SData != null && SData.DiffResults != null)
 		{
@@ -554,7 +554,7 @@ public class DiffData
 	public int JudgeNameId = -1;
 	public EDivision Division;
 	public ERound Round;
-	public int Pool;
+	public EPool Pool;
 	public int Team;
 	public int NumScores = 16;
 	public float[] DiffScores = new float[20];
@@ -564,7 +564,7 @@ public class DiffData
 	{
 	}
 
-	public DiffData(int InNumScores, EDivision InDiv, ERound InRound, int InPool, int InTeam)
+	public DiffData(int InNumScores, EDivision InDiv, ERound InRound, EPool InPool, int InTeam)
 	{
 		NumScores = InNumScores;
 		Division = InDiv;

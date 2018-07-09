@@ -269,21 +269,21 @@ public class Global : MonoBehaviour
 		return stream;
 	}
 
-	public static bool DataExists(EDivision InDiv, ERound InRound, int InPool, int InTeam)
+	public static bool DataExists(EDivision InDiv, ERound InRound, EPool InPool, int InTeam)
 	{
-		if (Global.AllData == null || InPool < 0 || InPool >= Global.AllData.AllDivisions[(int)InDiv].Rounds[(int)InRound].Pools.Count ||
-			InTeam < 0 || InTeam >= Global.AllData.AllDivisions[(int)InDiv].Rounds[(int)InRound].Pools[InPool].Teams.Count)
+		if (Global.AllData == null || InPool == EPool.None || (int)InPool >= Global.AllData.AllDivisions[(int)InDiv].Rounds[(int)InRound].Pools.Count ||
+			InTeam < 0 || InTeam >= Global.AllData.AllDivisions[(int)InDiv].Rounds[(int)InRound].Pools[(int)InPool].Teams.Count)
 			return false;
 
 		return true;
 	}
 
-	public static TeamData GetTeamData(EDivision InDiv, ERound InRound, int InPool, int InTeam)
+	public static TeamData GetTeamData(EDivision InDiv, ERound InRound, EPool InPool, int InTeam)
 	{
 		if (!DataExists(InDiv, InRound, InPool, InTeam))
 			return null;
 
-		return Global.AllData.AllDivisions[(int)InDiv].Rounds[(int)InRound].Pools[InPool].Teams[InTeam].Data;
+		return Global.AllData.AllDivisions[(int)InDiv].Rounds[(int)InRound].Pools[(int)InPool].Teams[InTeam].Data;
 	}
 
     public static Rect GetScreenSpaceRectTransform(GameObject go)
@@ -310,13 +310,13 @@ public class Global : MonoBehaviour
         }
     }
 
-    public static bool IsValid(EDivision InDivision, ERound InRound, int InPool, int InTeam)
+    public static bool IsValid(EDivision InDivision, ERound InRound, EPool InPool, int InTeam)
     {
         if ((int)InDivision >= 0 && (int)InRound >= 0 && InPool >= 0 && InTeam >= 0 &&
             (int)InDivision < Global.AllData.AllDivisions.Length &&
             (int)InRound < Global.AllData.AllDivisions[(int)InDivision].Rounds.Length &&
-            InPool < Global.AllData.AllDivisions[(int)InDivision].Rounds[(int)InRound].Pools.Count &&
-            InTeam < Global.AllData.AllDivisions[(int)InDivision].Rounds[(int)InRound].Pools[InPool].Teams.Count)
+			(int)InPool < Global.AllData.AllDivisions[(int)InDivision].Rounds[(int)InRound].Pools.Count &&
+            InTeam < Global.AllData.AllDivisions[(int)InDivision].Rounds[(int)InRound].Pools[(int)InPool].Teams.Count)
         {
             return true;
         }
@@ -419,10 +419,13 @@ public enum ERound
 
 public enum EPool
 {
+	None = -1,
 	A,
 	B,
 	C,
-	D
+	D,
+	Max,
+	PostScores
 }
 
 public class RoutineScoreData

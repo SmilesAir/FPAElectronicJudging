@@ -114,11 +114,11 @@ public class Overlay : InterfaceBase
         if (HasValidData())
         {
             if (Global.AllData != null && Global.AllData.AllDivisions.Length > ((int)CurDivision) && Global.AllData.AllDivisions[((int)CurDivision)].Rounds.Length > ((int)CurRound) &&
-                Global.AllData.AllDivisions[((int)CurDivision)].Rounds[((int)CurRound)].Pools.Count > CurPool &&
-                Global.AllData.AllDivisions[((int)CurDivision)].Rounds[((int)CurRound)].Pools[CurPool].Teams.Count > CurTeam)
+                Global.AllData.AllDivisions[((int)CurDivision)].Rounds[((int)CurRound)].Pools.Count > (int)CurPool &&
+                Global.AllData.AllDivisions[((int)CurDivision)].Rounds[((int)CurRound)].Pools[(int)CurPool].Teams.Count > CurTeam)
             {
-                string PlayerNames = Global.AllData.AllDivisions[((int)CurDivision)].Rounds[((int)CurRound)].Pools[CurPool].Teams[CurTeam].Data.PlayerNamesWithRank;
-                int TotalTeams = Global.AllData.AllDivisions[((int)CurDivision)].Rounds[((int)CurRound)].Pools[CurPool].Teams.Count;
+                string PlayerNames = Global.AllData.AllDivisions[((int)CurDivision)].Rounds[((int)CurRound)].Pools[(int)CurPool].Teams[CurTeam].Data.PlayerNamesWithRank;
+                int TotalTeams = Global.AllData.AllDivisions[((int)CurDivision)].Rounds[((int)CurRound)].Pools[(int)CurPool].Teams.Count;
                 //GUI.Label(new Rect(400, 400, 500, 500), ((int)CurDivision) + "  " + ((int)CurRound) + "  " + CurPool + "   " + CurTeam);
 
                 float OverlayHeight = Screen.height * .85f;
@@ -152,7 +152,7 @@ public class Overlay : InterfaceBase
     {
         if (HasValidData())
         {
-            int TeamsCount = Global.AllData.AllDivisions[((int)CurDivision)].Rounds[((int)CurRound)].Pools[CurPool].Teams.Count;
+            int TeamsCount = Global.AllData.AllDivisions[((int)CurDivision)].Rounds[((int)CurRound)].Pools[(int)CurPool].Teams.Count;
             bool bUseSimpleBg = TeamsCount > 8;
 
             if (!bUseSimpleBg)
@@ -192,7 +192,7 @@ public class Overlay : InterfaceBase
 
             List<TeamDataDisplay> SortedTeamList = new List<TeamDataDisplay>();
             List<TeamDataDisplay> NoScoresTeamList = new List<TeamDataDisplay>();
-            foreach (TeamDataDisplay tdd in Global.AllData.AllDivisions[((int)CurDivision)].Rounds[((int)CurRound)].Pools[CurPool].Teams)
+            foreach (TeamDataDisplay tdd in Global.AllData.AllDivisions[((int)CurDivision)].Rounds[((int)CurRound)].Pools[(int)CurPool].Teams)
             {
                 if (tdd.Data.RoutineScores.GetTotalPoints() > 0f)
                 {
@@ -266,7 +266,7 @@ public class Overlay : InterfaceBase
             Global.AllData != null &&
             ((int)CurDivision) < Global.AllData.AllDivisions.Length &&
             ((int)CurRound) < Global.AllData.AllDivisions[((int)CurDivision)].Rounds.Length &&
-            CurPool < Global.AllData.AllDivisions[((int)CurDivision)].Rounds[((int)CurRound)].Pools.Count)
+			(int)CurPool < Global.AllData.AllDivisions[((int)CurDivision)].Rounds[((int)CurRound)].Pools.Count)
         {
             return true;
         }

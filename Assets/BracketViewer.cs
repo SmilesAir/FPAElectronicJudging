@@ -78,7 +78,7 @@ public class BracketViewer : MonoBehaviour
 			foreach (PoolData pd in Pools)
 			{
 				OutStr.WriteLine("Pool " + pd.PoolName + "\t\tAI\tEx\tDiff");
-                ResultsData JData = TournamentData.FindResultsData((EDivision)CurDivIndex, (ERound)CurRoundIndex, PoolIndex);
+                ResultsData JData = TournamentData.FindResultsData((EDivision)CurDivIndex, (ERound)CurRoundIndex, (EPool)PoolIndex);
 
 				int TeamNum = 0;
 				foreach (TeamDataDisplay tdd in pd.Teams)
@@ -369,7 +369,7 @@ public class BracketViewer : MonoBehaviour
 
 	void WriteJudgeNamesXml(XmlWriter writer, int PoolIndex)
 	{
-		ResultsData RData = TournamentData.FindResultsData((EDivision)CurDivIndex, (ERound)CurRoundIndex, PoolIndex);
+		ResultsData RData = TournamentData.FindResultsData((EDivision)CurDivIndex, (ERound)CurRoundIndex, (EPool)PoolIndex);
 
 		int ExCount = RData.ExJudgeIds.Count;
 		for (int ExIndex = 0; ExIndex < ExCount; ++ExIndex)
@@ -745,7 +745,7 @@ public class BracketViewer : MonoBehaviour
 						AIData JData = null;
 						if (EditJudgeIndex >= Data.RoutineScores.AIResults.Count)
 						{
-							EditAIData = new AIData((EDivision)CurDivIndex, (ERound)CurRoundIndex, EditPoolIndex, EditTeamIndex);
+							EditAIData = new AIData((EDivision)CurDivIndex, (ERound)CurRoundIndex, (EPool)EditPoolIndex, EditTeamIndex);
 							bEditAddNewData = true;
 							EditJudgeName = "Judge Name";
 						}
@@ -802,7 +802,7 @@ public class BracketViewer : MonoBehaviour
 						ExData JData = null;
 						if (EditJudgeIndex >= Data.RoutineScores.ExResults.Count)
 						{
-							EditExData = new ExData((EDivision)CurDivIndex, (ERound)CurRoundIndex, EditPoolIndex, EditTeamIndex);
+							EditExData = new ExData((EDivision)CurDivIndex, (ERound)CurRoundIndex, (EPool)EditPoolIndex, EditTeamIndex);
 							bEditAddNewData = true;
 							EditJudgeName = "Judge Name";
 						}
@@ -855,7 +855,7 @@ public class BracketViewer : MonoBehaviour
 						DiffData JData = null;
 						if (EditJudgeIndex >= Data.RoutineScores.DiffResults.Count)
 						{
-							EditDiffData = new DiffData(20, (EDivision)CurDivIndex, (ERound)CurRoundIndex, EditPoolIndex, EditTeamIndex);
+							EditDiffData = new DiffData(20, (EDivision)CurDivIndex, (ERound)CurRoundIndex, (EPool)EditPoolIndex, EditTeamIndex);
 							bEditAddNewData = true;
 							EditJudgeName = "Judge Name";
 						}

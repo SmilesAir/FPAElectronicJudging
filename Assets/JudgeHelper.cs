@@ -32,7 +32,7 @@ public class JudgeHelper : MonoBehaviour
 
 	void MoveTeamToJudgeCategory(int PlayerId, int CategoryIndex)
 	{
-		ResultsData Data = TournamentData.FindResultsData((EDivision)DivisionCombo.GetSelectedItemIndex(), (ERound)RoundCombo.GetSelectedItemIndex(), CurPoolButtonIndex);
+		ResultsData Data = TournamentData.FindResultsData((EDivision)DivisionCombo.GetSelectedItemIndex(), (ERound)RoundCombo.GetSelectedItemIndex(), (EPool)CurPoolButtonIndex);
 		if (Data != null)
 		{
 			Data.AIJudgeIds.Remove(PlayerId);
@@ -75,7 +75,7 @@ public class JudgeHelper : MonoBehaviour
 
 				if (!bMovedSuccess)
 				{
-					ResultsData Data = TournamentData.FindResultsData((EDivision)DivisionCombo.GetSelectedItemIndex(), (ERound)RoundCombo.GetSelectedItemIndex(), CurPoolButtonIndex);
+					ResultsData Data = TournamentData.FindResultsData((EDivision)DivisionCombo.GetSelectedItemIndex(), (ERound)RoundCombo.GetSelectedItemIndex(), (EPool)CurPoolButtonIndex);
 					if (Data != null)
 					{
 						Data.AIJudgeIds.Remove(MovingNameId);
@@ -161,10 +161,10 @@ public class JudgeHelper : MonoBehaviour
 
 		if (CurPoolButtonIndex != -1)
 		{
-			ResultsData RData = TournamentData.FindResultsData((EDivision)DivisionCombo.GetSelectedItemIndex(), (ERound)RoundCombo.GetSelectedItemIndex(), CurPoolButtonIndex);
+			ResultsData RData = TournamentData.FindResultsData((EDivision)DivisionCombo.GetSelectedItemIndex(), (ERound)RoundCombo.GetSelectedItemIndex(), (EPool)CurPoolButtonIndex);
 			if (RData == null)
 			{
-				RData = new ResultsData((EDivision)DivisionCombo.GetSelectedItemIndex(), (ERound)RoundCombo.GetSelectedItemIndex(), CurPoolButtonIndex);
+				RData = new ResultsData((EDivision)DivisionCombo.GetSelectedItemIndex(), (ERound)RoundCombo.GetSelectedItemIndex(), (EPool)CurPoolButtonIndex);
 				Pools[CurPoolButtonIndex].JudgersId = RData.Id;
 
 				Global.AllData.ResultsList.Add(RData);
@@ -365,7 +365,7 @@ public class JudgeHelper : MonoBehaviour
 	{
 		List<PoolData> Pools = Global.AllData.AllDivisions[DivisionCombo.GetSelectedItemIndex()].Rounds[RoundCombo.GetSelectedItemIndex()].Pools;
 
-		return Pools[InResultsData.Pool].ContainsPlayer(InPlayer);
+		return Pools[(int)InResultsData.Pool].ContainsPlayer(InPlayer);
 	}
 }
 
@@ -374,7 +374,7 @@ public class ResultsData
 	public int Id = -1;
 	public EDivision Division = EDivision.Open;
 	public ERound Round = ERound.Finals;
-	public int Pool = -1;
+	public EPool Pool = EPool.None;
 	public List<int> AIJudgeIds = new List<int>();
 	public List<int> ExJudgeIds = new List<int>();
 	public List<int> DiffJudgeIds = new List<int>();
@@ -396,7 +396,7 @@ public class ResultsData
 		Id = ResultsData.GetUniqueId();
 	}
 
-	public ResultsData(EDivision InDiv, ERound InRound, int InPool)
+	public ResultsData(EDivision InDiv, ERound InRound, EPool InPool)
 	{
 		Division = InDiv;
 		Round = InRound;

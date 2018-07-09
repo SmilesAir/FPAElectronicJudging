@@ -12,7 +12,7 @@ public class HeadJudger : MonoBehaviour
 {
 	public EDivision CurDivision = EDivision.Open;
 	public ERound CurRound = ERound.Prelims;
-	public int CurPool = -1;
+	public EPool CurPool = EPool.None;
 	public bool IsJudgingSecondaryPool { get { return bFestivalJudging && CurPool == CurFestivalPool; } }
 	public int CurTeam
 	{
@@ -22,7 +22,7 @@ public class HeadJudger : MonoBehaviour
 	int CurPrivateTeam = -1;
 	int CurPrivateTeam2 = -1;
 	public bool bFestivalJudging = false;
-	public int CurFestivalPool = -1;
+	public EPool CurFestivalPool = EPool.None;
 	public DivisionComboBox DivisionCombo;
 	public RoundComboBox RoundCombo;
 	public Vector2 PoolsScrollPos = new Vector2();
@@ -34,6 +34,10 @@ public class HeadJudger : MonoBehaviour
 	public bool bJudging;
 	int CancelClickCount = 0;
 	float CancelClickTimer = -1f;
+	float ResetRoutineStartTime = 20f;
+	float CurrentResetRoutineTime = 0f;
+	float ResetStartTimeCooldown = 1.5f;
+	float CurrentResetStartTimeCooldown = 0;
 	public int ActiveJudgingJudgers = 0;
 	bool bRoutineTimeElapsed = false;
 
@@ -131,7 +135,7 @@ public class HeadJudger : MonoBehaviour
 		return Ret;
 	}
 
-	public int GetJudgePool(string InGuid)
+	public EPool GetJudgePool(string InGuid)
 	{
 		return CurPool;
 	}
@@ -191,11 +195,11 @@ public class HeadJudger : MonoBehaviour
 		}
 	}
 
-    public void SetCurrentPool(int NewCurPool)
+    public void SetCurrentPool(EPool NewCurPool)
     {
         CurPool = NewCurPool;
 
-        if (NewCurPool != -1 && Global.IsValid(CurDivision, CurRound, NewCurPool, 0))
+        if (NewCurPool != EPool.None && Global.IsValid(CurDivision, CurRound, NewCurPool, 0))
         {
             CurTeam = 0;
         }
@@ -524,16 +528,49 @@ public class HeadJudger : MonoBehaviour
 
 		if (bLockedForJudging && !bJudging)
 		{
-			if (GUILayout.Button("Click on First Throw", ActiveStyle, GUILayout.Width(Screen.width * .45f), GUILayout.Height(BotRect.height)))
+			CurrentResetStartTimeCooldown -= Time.deltaTime;
+
+			if (GUILayout.Button("Click on First Throw", CurrentResetStartTimeCooldown > 0f ? InActiveStyle : ActiveStyle, GUILayout.Width(Screen.width * .45f), GUILayout.Height(BotRect.height)))
 			{
-				StartRoutine();
+				if (CurrentResetStartTimeCooldown <= 0f)
+				{
+					StartRoutine();
+				}
 			}
 		}
 		else if (bJudging)
 		{
 			CancelClickTimer -= Time.deltaTime;
+			CurrentResetRoutineTime -= Time.deltaTime;
 
-			if (GUILayout.Button("Triple Click to Stop Judging", ActiveStyle, GUILayout.Width(Screen.width * .45f), GUILayout.Height(BotRect.height)))
+			float cancelWidth = Screen.width * .45f;
+			float cancelHeight = BotRect.height;
+
+			if (CurrentResetRoutineTime > 0)
+			{
+				cancelWidth /= 2f;
+				cancelWidth -= 10f;
+
+				if (GUILayout.Button("Triple Click to Reset", ActiveStyle, GUILayout.Width(cancelWidth), GUILayout.Height(cancelHeight)))
+				{
+					++CancelClickCount;
+					if (CancelClickCount >= 2)
+					{
+						CancelClickCount = 0;
+						CancelClickTimer = -1f;
+
+						ResetRoutine();
+					}
+					else if (CancelClickTimer < 0)
+					{
+						CancelClickCount = 0;
+					}
+
+					CancelClickTimer = .5f;
+				}
+			}
+
+			if (GUILayout.Button("Triple Click to Stop Judging", ActiveStyle, GUILayout.Width(cancelWidth), GUILayout.Height(cancelHeight)))
 			{
 				++CancelClickCount;
 				if (CancelClickCount >= 2)
@@ -570,6 +607,8 @@ public class HeadJudger : MonoBehaviour
 			// Send start to livestream
 			TeamData readyTeam = Global.GetTeamData(CurDivision, CurRound, CurPool, CurTeam);
 			SendRestMessageAsync(readyTeam, LiveStream.TeamStates.Begin);
+
+			CurrentResetRoutineTime = ResetRoutineStartTime;
 
 			bRoutineTimeElapsed = false;
 		}
@@ -615,6 +654,18 @@ public class HeadJudger : MonoBehaviour
 
 				SendRestMessageAsync(finishedTeam);
 			}
+		}
+	}
+
+	public void ResetRoutine()
+	{
+		if (bJudging)
+		{
+			bJudging = false;
+
+			CurrentResetStartTimeCooldown = ResetStartTimeCooldown;
+
+			Global.NetObj.ServerSendResetRoutine();
 		}
 	}
 
@@ -718,7 +769,7 @@ public class HeadJudger : MonoBehaviour
 			SelectedStyle.fontStyle = FontStyle.Bold;
 			GUIStyle ButtonStyle = new GUIStyle("button");
 			if (GUI.Button(new Rect(20 + 2f * SelectButWidth + Screen.width * .1f, SelectY, PoolButWidth, SelectButHeight),
-				"Pool: " + Round.Pools[CurFestivalPool].PoolName, CurPool == CurFestivalPool ? SelectedStyle : ButtonStyle))
+				"Pool: " + Round.Pools[(int)CurFestivalPool].PoolName, CurPool == CurFestivalPool ? SelectedStyle : ButtonStyle))
 			{
                 SetCurrentPool(CurFestivalPool);
 				InitJudgersNameIds();
@@ -726,7 +777,7 @@ public class HeadJudger : MonoBehaviour
 			}
 
 			if (GUI.Button(new Rect(20 + 2f * SelectButWidth + Screen.width * .12f + PoolButWidth, SelectY, PoolButWidth, SelectButHeight),
-				"Pool: " + Round.Pools[CurFestivalPool + 2].PoolName, CurPool == CurFestivalPool + 2 ? SelectedStyle : ButtonStyle))
+				"Pool: " + Round.Pools[(int)CurFestivalPool + 2].PoolName, CurPool == CurFestivalPool + 2 ? SelectedStyle : ButtonStyle))
 			{
                 SetCurrentPool(CurFestivalPool + 2);
 				InitJudgersNameIds();
@@ -738,7 +789,7 @@ public class HeadJudger : MonoBehaviour
 		if (!DivisionCombo.IsPicking && !RoundCombo.IsPicking && bValidDivisionRoundSettings)
 		{
 			Rect LeftRect = new Rect(20, Screen.height * .22f, Screen.width / 2 - 40, Screen.height * .5f);
-			if (CurPool == -1 && !bFestivalJudging)
+			if (CurPool == EPool.None && !bFestivalJudging)
 			{
 				GUILayout.BeginArea(LeftRect);
 				PoolsScrollPos = GUILayout.BeginScrollView(PoolsScrollPos);
@@ -761,13 +812,13 @@ public class HeadJudger : MonoBehaviour
 						GUIStyle ButtonStyle = new GUIStyle("button");
 						GUIStyle PoolStyle = new GUIStyle("button");
 						PoolStyle.alignment = TextAnchor.UpperLeft;
-						PoolStyle.normal.textColor = PoolIndex == CurPool ? Color.green : ButtonStyle.normal.textColor;
-						PoolStyle.hover.textColor = PoolIndex == CurPool ? Color.green : ButtonStyle.hover.textColor;
-						PoolStyle.fontStyle = PoolIndex == CurPool ? FontStyle.Bold : ButtonStyle.fontStyle;
+						PoolStyle.normal.textColor = (EPool)PoolIndex == CurPool ? Color.green : ButtonStyle.normal.textColor;
+						PoolStyle.hover.textColor = (EPool)PoolIndex == CurPool ? Color.green : ButtonStyle.hover.textColor;
+						PoolStyle.fontStyle = (EPool)PoolIndex == CurPool ? FontStyle.Bold : ButtonStyle.fontStyle;
 						Vector2 PoolTextSize = PoolStyle.CalcSize(new GUIContent(PoolText));
 						if (GUILayout.Button(PoolText, PoolStyle, GUILayout.Width(LeftRect.width * .9f), GUILayout.Height(PoolTextSize.y)))
 						{
-                            SetCurrentPool(PoolIndex);
+                            SetCurrentPool((EPool)PoolIndex);
 							InitJudgersNameIds();
 							++Global.CurDataState;
 							bFestivalJudging = false;
@@ -796,13 +847,13 @@ public class HeadJudger : MonoBehaviour
 						GUIStyle ButtonStyle = new GUIStyle("button");
 						GUIStyle PoolStyle = new GUIStyle("button");
 						PoolStyle.alignment = TextAnchor.UpperLeft;
-						PoolStyle.normal.textColor = ButIndex == CurPool ? Color.green : ButtonStyle.normal.textColor;
-						PoolStyle.hover.textColor = ButIndex == CurPool ? Color.green : ButtonStyle.hover.textColor;
-						PoolStyle.fontStyle = ButIndex == CurPool ? FontStyle.Bold : ButtonStyle.fontStyle;
+						PoolStyle.normal.textColor = ButIndex == (int)CurPool ? Color.green : ButtonStyle.normal.textColor;
+						PoolStyle.hover.textColor = ButIndex == (int)CurPool ? Color.green : ButtonStyle.hover.textColor;
+						PoolStyle.fontStyle = ButIndex == (int)CurPool ? FontStyle.Bold : ButtonStyle.fontStyle;
 						Vector2 PoolTextSize = PoolStyle.CalcSize(new GUIContent(PoolText));
 						if (GUILayout.Button(PoolText, PoolStyle, GUILayout.Width(LeftRect.width * .9f), GUILayout.Height(PoolTextSize.y)))
 						{
-							CurFestivalPool = ButIndex;
+							CurFestivalPool = (EPool)ButIndex;
 							bFestivalJudging = true;
 						}
 					}
@@ -812,7 +863,7 @@ public class HeadJudger : MonoBehaviour
 				GUILayout.EndScrollView();
 				GUILayout.EndArea();
 			}
-			else if (!bFestivalJudging || CurPool != -1)
+			else if (!bFestivalJudging || CurPool != EPool.None)
 			{
 				float LeftRectWidth = Screen.width * .45f;
 				//new Rect(Screen.width - RightRectWidth - 20, AreaRect.y, RightRectWidth, Screen.height - AreaRect.y - 20);
@@ -824,11 +875,11 @@ public class HeadJudger : MonoBehaviour
 				TeamStyle.alignment = TextAnchor.MiddleLeft;
 				GUIStyle BackStyle = new GUIStyle(TeamStyle);
 				List<PoolData> Pools = Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools;
-				if (CurPool >= 0 && CurPool < Pools.Count)
+				if (CurPool >= 0 && (int)CurPool < Pools.Count)
 				{
-					for (int TeamIndex = 0; TeamIndex < Pools[CurPool].Teams.Count; ++TeamIndex)
+					for (int TeamIndex = 0; TeamIndex < Pools[(int)CurPool].Teams.Count; ++TeamIndex)
 					{
-						TeamData Data = Pools[CurPool].Teams[TeamIndex].Data;
+						TeamData Data = Pools[(int)CurPool].Teams[TeamIndex].Data;
 						if (Data != null)
 						{
 							GUIContent TeamContent = new GUIContent((TeamIndex + 1) + ". " + Data.PlayerNames);
@@ -865,7 +916,7 @@ public class HeadJudger : MonoBehaviour
 				Vector2 BackSize = BackStyle.CalcSize(BackContent);
 				if (GUILayout.Button(BackContent, BackStyle, GUILayout.Width(LeftRectWidth), GUILayout.Height(BackSize.y)))
 				{
-					SetCurrentPool(-1);
+					SetCurrentPool(EPool.None);
 					CurTeam = -1;
 					bFestivalJudging = false;
 				}
@@ -880,13 +931,13 @@ public class HeadJudger : MonoBehaviour
 		}
 		else
 		{
-            SetCurrentPool(-1);
+            SetCurrentPool(EPool.None);
 			bFestivalJudging = false;
 		}
 		#endregion
 
 		#region Judges
-		if (CurPool != -1 && RData != null)
+		if (CurPool != EPool.None && RData != null)
 		{
 			Rect RightRect = new Rect(Screen.width * .5f + 20, Screen.height * .22f, Screen.width / 2 - 40, Screen.height * .88f - 20);
 			GUILayout.BeginArea(RightRect);
@@ -1022,12 +1073,12 @@ public class HeadJudger : MonoBehaviour
 
 					if (Global.IsValid(CurDivision, CurRound, CurPool, CurTeam))
 					{
-						int curPoolTeamCount = Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[CurPool].Teams.Count;
+						int curPoolTeamCount = Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[(int)CurPool].Teams.Count;
 
 						if (bFestivalJudging)
 						{
 							int cachedTeamIndex = CurTeam;
-							int newPool = CurPool + 2;
+							int newPool = (int)CurPool + 2;
 
 							if (newPool >= 4)
 							{
@@ -1038,7 +1089,7 @@ public class HeadJudger : MonoBehaviour
 
 									if (cachedTeamIndex < newPoolTeamCount - 1)
 									{
-										CurPool = newPool;
+										CurPool = (EPool)newPool;
 										InitJudgersNameIds();
 										CurTeam = cachedTeamIndex + 1;
 										++Global.CurDataState;
@@ -1065,7 +1116,7 @@ public class HeadJudger : MonoBehaviour
 								}
 								else if (cachedTeamIndex < newPoolTeamCount)
 								{
-									CurPool = newPool;
+									CurPool = (EPool)newPool;
 									CurTeam = cachedTeamIndex;
 									InitJudgersNameIds();
 									++Global.CurDataState;

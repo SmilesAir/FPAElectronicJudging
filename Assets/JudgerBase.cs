@@ -84,7 +84,7 @@ public class JudgerBase : InterfaceBase
         HeaderDrawer.EditTeamsButtonUI.gameObject.SetActive(false);
         HeaderDrawer.FinishEditTeamsButtonUI.gameObject.SetActive(true);
 
-        TeamsDrawer.InitButtonTeamsText((int)CurDivision, (int)CurRound, CurPool, JudgeCategoryIndex, Global.CategoryToCategoryView(JudgerCategory));
+        TeamsDrawer.InitButtonTeamsText((int)CurDivision, (int)CurRound, (int)CurPool, JudgeCategoryIndex, Global.CategoryToCategoryView(JudgerCategory));
     }
 
     public void OnFinishEditTeamButtonClickCallback()
@@ -164,7 +164,7 @@ public class JudgerBase : InterfaceBase
 		if (Global.AllData == null || Global.AllNameData == null)
 			return;
 
-		if (CurPool != -1)
+		if (CurPool != EPool.None)
 		{
 			int NameId = GetJudgeNameId();
 			if (NameId != -1)
@@ -187,7 +187,7 @@ public class JudgerBase : InterfaceBase
 		if (JudgeNameId != -1 && !bIsDataDirty)
 			return JudgeNameId;
 
-		if (CurPool != -1)
+		if (CurPool != EPool.None)
 		{
 			ResultsData Data = TournamentData.FindResultsData(CurDivision, CurRound, CurPool);
 			JudgeNameId = Data.GetNameId(JudgerCategory, JudgeCategoryIndex);
@@ -210,10 +210,10 @@ public class JudgerBase : InterfaceBase
 
     public virtual string GetTeamNameString()
     {
-        if (Global.AllData == null || CurPool < 0 || CurPool >= Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools.Count)
+        if (Global.AllData == null || CurPool == EPool.None || (int)CurPool >= Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools.Count)
             return "";
 
-        List<TeamDataDisplay> Teams = Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[CurPool].Teams;
+        List<TeamDataDisplay> Teams = Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[(int)CurPool].Teams;
         if (!bIsEditing)
         {
              return Teams[CurTeam].Data.PlayerNames;
@@ -246,7 +246,7 @@ public class JudgerBase : InterfaceBase
 	{
         StopRoutineJudging();
 
-		SendResultsToHeadJudger((int)CurDivision, (int)CurRound, CurPool, CurJudgingTeam);
+		SendResultsToHeadJudger((int)CurDivision, (int)CurRound, (int)CurPool, CurJudgingTeam);
 
 		CurJudgingTeam = -1;
 	}
@@ -262,6 +262,13 @@ public class JudgerBase : InterfaceBase
 		Global.NetObj.SendJudgeReady(JudgeGuid, false);
 		Global.NetObj.SendJudgeJudging(JudgeGuid, false);
 		Global.NetObj.SendJudgeLocked(JudgeGuid, false);
+	}
+
+	public override void ResetRoutineJudging()
+	{
+		base.ResetRoutineJudging();
+
+		Global.NetObj.SendJudgeJudging(JudgeGuid, false);
 	}
 
 	public virtual void SendResultsToHeadJudger(int InDiv, int InRound, int InPool, int InTeam)
@@ -283,7 +290,7 @@ public class JudgerBase : InterfaceBase
 
 	public virtual void FinishEditingTeam(int InTeamIndex)
 	{
-		SendResultsToHeadJudger((int)CurDivision, (int)CurRound, CurPool, EditingTeamIndex);
+		SendResultsToHeadJudger((int)CurDivision, (int)CurRound, (int)CurPool, EditingTeamIndex);
 
 		EditingTeamIndex = -1;
 		bIsEditing = false;

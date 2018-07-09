@@ -382,6 +382,11 @@ public class Networking : MonoBehaviour
 		GetComponent<NetworkView>().RPC("ServerSendStopRoutineRPC", RPCMode.Others);
 	}
 
+	public void ServerSendResetRoutine()
+	{
+		GetComponent<NetworkView>().RPC("ServerSendResetRoutineRPC", RPCMode.Others);
+	}
+
 	public void ClientSendFinishJudgingEx(string InExData)
 	{
 		JudgerBase JudgeBase = Global.GetActiveJudger();
@@ -434,6 +439,14 @@ public class Networking : MonoBehaviour
 		InterfaceBase JudgeBase = Global.GetActiveInterface();
 		if (JudgeBase)
 			JudgeBase.StopRoutineJudging();
+	}
+
+	[RPC]
+	void ServerSendResetRoutineRPC()
+	{
+		InterfaceBase JudgeBase = Global.GetActiveInterface();
+		if (JudgeBase)
+			JudgeBase.ResetRoutineJudging();
 	}
 
 	[RPC]
@@ -587,7 +600,7 @@ public class Networking : MonoBehaviour
 		{
 			Judger.CurDivision = (EDivision)InDivision;
 			Judger.CurRound = (ERound)InRound;
-			Judger.CurPool = InPool;
+			Judger.CurPool = (EPool)InPool;
 			Judger.CurTeam = InTeam;
 			Judger.WaitingForJudgesCount = InActiveJudgingJudgers;
 
@@ -604,7 +617,7 @@ public class Networking : MonoBehaviour
 			{
 				OverlayScript.CurDivision = (EDivision)InDivision;
 				OverlayScript.CurRound = (ERound)InRound;
-				OverlayScript.CurPool = InPool;
+				OverlayScript.CurPool = (EPool)InPool;
 				OverlayScript.CurTeam = InTeam;
 			}
 		}

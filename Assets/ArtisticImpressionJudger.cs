@@ -147,7 +147,7 @@ public class ArtisticImpressionJudger : JudgerBase
 
 					if (GUI.Button(new Rect(Screen.width * .07f, Screen.height * .35f, Screen.width * .3f, Screen.height * .2f), "Send Backup Data"))
 					{
-						SendResultsToHeadJudger((int)CurData.Division, (int)CurData.Round, CurData.Pool, CurData.Team);
+						SendResultsToHeadJudger((int)CurData.Division, (int)CurData.Round, (int)CurData.Pool, CurData.Team);
 					}
 					if (GUI.Button(new Rect(Screen.width * .42f, Screen.height * .35f, Screen.width * .51f, Screen.height * .2f), "Exit Backup mode and discard changes"))
 					{
@@ -197,7 +197,7 @@ public class ArtisticImpressionJudger : JudgerBase
 		RoutineScoreData SData = Global.AllData.AllDivisions[InDiv].Rounds[InRound].Pools[InPool].Teams[InTeam].Data.RoutineScores;
 		CurData.Division = (EDivision)InDiv;
 		CurData.Round = (ERound)InRound;
-		CurData.Pool = InPool;
+		CurData.Pool = (EPool)InPool;
 		CurData.Team = InTeam;
 		CurData.JudgeNameId = GetJudgeNameId();
 		SData.SetAIResults(CurData);
@@ -224,11 +224,13 @@ public class ArtisticImpressionJudger : JudgerBase
 
 	public override void StartEditingTeam(int InTeamIndex)
 	{
-		if (Global.AllData == null || CurPool < 0 || CurPool >= Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools.Count ||
-			InTeamIndex < 0 || InTeamIndex >= Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[CurPool].Teams.Count)
+		if (Global.AllData == null || CurPool == EPool.None || (int)CurPool >= Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools.Count ||
+			InTeamIndex < 0 || InTeamIndex >= Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[(int)CurPool].Teams.Count)
+		{
 			return;
+		}
 
-		RoutineScoreData SData = Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[CurPool].Teams[InTeamIndex].Data.RoutineScores;
+		RoutineScoreData SData = Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[(int)CurPool].Teams[InTeamIndex].Data.RoutineScores;
 
 		if (SData != null && SData.DiffResults != null)
 		{
@@ -382,7 +384,7 @@ public class AIData
 	public int JudgeNameId = -1;
 	public EDivision Division;
 	public ERound Round;
-	public int Pool;
+	public EPool Pool;
 	public int Team;
 	public float Variety = 0;
 	public float Teamwork = 0;
@@ -395,7 +397,7 @@ public class AIData
 	{
 	}
 
-	public AIData(EDivision InDiv, ERound InRound, int InPool, int InTeam)
+	public AIData(EDivision InDiv, ERound InRound, EPool InPool, int InTeam)
 	{
 		Division = InDiv;
 		Round = InRound;
