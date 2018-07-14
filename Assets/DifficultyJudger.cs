@@ -284,6 +284,13 @@ public class DifficultyJudger : JudgerBase
 
 	string GetBackupDisplayString(BackupDiffData bd)
 	{
+
+
+		if (bd.Data == null)
+		{
+			Debug.Log(String.Format(" {0}, {1}, {2} ", bd != null, bd != null && bd.Data != null, bd != null && bd.Data != null ? (int)bd.Data.Pool : 0));
+		}
+
 		TeamData td = Global.GetTeamData(bd.Data.Division, bd.Data.Round, bd.Data.Pool, bd.Data.Team);
 		string TeamName = td != null ? td.PlayerNames : "Missing Team";
 		NameData JudgeNameData = NameDatabase.FindInDatabase(bd.Data.JudgeNameId);
@@ -303,35 +310,38 @@ public class DifficultyJudger : JudgerBase
 
 		foreach (BackupDiffData bd in BackupList)
 		{
-			GUILayout.BeginHorizontal();
-			string BackupStr = GetBackupDisplayString(bd) + " | ";
-			for (int DiffIndex = 0; DiffIndex < bd.Data.NumScores; ++DiffIndex)
+			if (bd.Data != null)
 			{
-				int ConsecScore = bd.Data.ConsecScores[DiffIndex];
-				BackupStr += bd.Data.DiffScores[DiffIndex] + (ConsecScore == -1 ? "-" : (ConsecScore == 1 ? "+" : "")) + (DiffIndex == bd.Data.NumScores - 1 ? "" : ", ");
-			}
-			GUIStyle LabelStyle = new GUIStyle("label");
-			GUIContent BackupContent = new GUIContent(BackupStr);
-			GUILayout.Label(BackupContent, GUILayout.MaxWidth(LabelStyle.CalcSize(BackupContent).x + 20));
-			if (GUILayout.Button("Load"))
-			{
-				bIsChoosingBackup = false;
-				//bBackupLoaded = true;
-				bInputingConsec = false;
-				CurData = bd.Data;
-				//CurBackupData = bd;
-
-				HeaderDrawer.CanvasGO.SetActive(true);
-				JudgerCanvasUI.SetActive(true);
-
-				for (int ScoreIndex = 0; ScoreIndex < bd.Data.NumScores; ++ScoreIndex)
+				GUILayout.BeginHorizontal();
+				string BackupStr = GetBackupDisplayString(bd) + " | ";
+				for (int DiffIndex = 0; DiffIndex < bd.Data.NumScores; ++DiffIndex)
 				{
-					NSArray[ScoreIndex].NumberValue = bd.Data.DiffScores[ScoreIndex];
-					ConsecScores[ScoreIndex] = bd.Data.ConsecScores[ScoreIndex];
+					int ConsecScore = bd.Data.ConsecScores[DiffIndex];
+					BackupStr += bd.Data.DiffScores[DiffIndex] + (ConsecScore == -1 ? "-" : (ConsecScore == 1 ? "+" : "")) + (DiffIndex == bd.Data.NumScores - 1 ? "" : ", ");
 				}
-			}
+				GUIStyle LabelStyle = new GUIStyle("label");
+				GUIContent BackupContent = new GUIContent(BackupStr);
+				GUILayout.Label(BackupContent, GUILayout.MaxWidth(LabelStyle.CalcSize(BackupContent).x + 20));
+				if (GUILayout.Button("Load"))
+				{
+					bIsChoosingBackup = false;
+					//bBackupLoaded = true;
+					bInputingConsec = false;
+					CurData = bd.Data;
+					//CurBackupData = bd;
 
-			GUILayout.EndHorizontal();
+					HeaderDrawer.CanvasGO.SetActive(true);
+					JudgerCanvasUI.SetActive(true);
+
+					for (int ScoreIndex = 0; ScoreIndex < bd.Data.NumScores; ++ScoreIndex)
+					{
+						NSArray[ScoreIndex].NumberValue = bd.Data.DiffScores[ScoreIndex];
+						ConsecScores[ScoreIndex] = bd.Data.ConsecScores[ScoreIndex];
+					}
+				}
+
+				GUILayout.EndHorizontal();
+			}
 		}
 
 		GUILayout.EndScrollView();
