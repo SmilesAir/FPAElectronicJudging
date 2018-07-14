@@ -37,7 +37,7 @@ public class JudgerBase : InterfaceBase
 	{
 		Global.NetObj.InitUdpListener(false);
 
-        JudgerCanvasUI.SetActive(true);
+		JudgerCanvasUI.SetActive(true);
 	}
 
 	public void OnEnable()
