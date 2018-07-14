@@ -761,7 +761,7 @@ public class HeadJudger : MonoBehaviour
 
 		if (bFestivalJudging)
 		{
-			float PoolButWidth = Screen.width * .15f;
+			float PoolButWidth = Screen.width * .09f;
 			RoundData Round = Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound];
 			GUIStyle SelectedStyle = new GUIStyle("button");
 			SelectedStyle.normal.textColor = Color.green;
@@ -780,6 +780,42 @@ public class HeadJudger : MonoBehaviour
 				"Pool: " + Round.Pools[(int)CurFestivalPool + 2].PoolName, CurPool == CurFestivalPool + 2 ? SelectedStyle : ButtonStyle))
 			{
                 SetCurrentPool(CurFestivalPool + 2);
+				InitJudgersNameIds();
+				++Global.CurDataState;
+			}
+
+			if (GUI.Button(new Rect(20 + 2f * SelectButWidth + Screen.width * .14f + 2f * PoolButWidth, SelectY, PoolButWidth, SelectButHeight),
+				"AI Scores", (CurPool > EPool.Max) ? SelectedStyle : ButtonStyle))
+			{
+				EPool newPool = EPool.None;
+				if (CurPool == EPool.A || CurPool == EPool.C)
+				{
+					newPool = EPool.PostScoresAC;
+				}
+				else if (CurPool == EPool.B || CurPool == EPool.D)
+				{
+					newPool = EPool.PostScoresBD;
+				}
+				else
+				{
+					switch (CurPool)
+					{
+						case EPool.PostScoresAC:
+							newPool = EPool.PostScoresCA;
+							break;
+						case EPool.PostScoresCA:
+							newPool = EPool.PostScoresAC;
+							break;
+						case EPool.PostScoresBD:
+							newPool = EPool.PostScoresDB;
+							break;
+						case EPool.PostScoresDB:
+							newPool = EPool.PostScoresBD;
+							break;
+					}
+				}
+
+				SetCurrentPool(newPool);
 				InitJudgersNameIds();
 				++Global.CurDataState;
 			}

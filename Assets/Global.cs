@@ -38,6 +38,8 @@ public class Global : MonoBehaviour
 	public static EInterface LastActiveInterface = EInterface.Startup;
 	public static EInterface ActiveInterface = EInterface.Startup;
 	public static bool bDrawAllInterfaceButtons = false; // Debug
+	public static bool bOverrideInterfaceAiScores = false;
+	public static EInterface SavedActiveInterface = EInterface.Startup;
 
 	public static int DivDataState = -1;
 	public static int CurDataState = -1;
@@ -67,24 +69,31 @@ public class Global : MonoBehaviour
 		QualitySettings.vSyncCount = 0;
 	}
 
-	// Update is called once per frame
-	void Update()
+	public static void SetOverrideInterfaceAiScores(bool enable)
 	{
-		--FastFramesCount;
+		bOverrideInterfaceAiScores = enable;
 
-		if (Input.GetMouseButton(0) || Input.touchCount > 0)
+		if (Obj)
 		{
-			Application.targetFrameRate = 20;
+			Obj.UpdateInterface();
+		}
+	}
 
-			FastFramesCount = 100;
-		}
-		else if (FastFramesCount > 0)
+	void UpdateInterface()
+	{
+		// Override interface to AI if in scores mode and is a diff judge originally
+		if (bOverrideInterfaceAiScores)
 		{
-			Application.targetFrameRate = 20;
+			if (ActiveInterface == EInterface.DiffJudger)
+			{
+				SavedActiveInterface = ActiveInterface;
+				ActiveInterface = EInterface.AIJudger;
+			}
 		}
-		else
+		else if (SavedActiveInterface != EInterface.Startup)
 		{
-			Application.targetFrameRate = 7;
+			ActiveInterface = SavedActiveInterface;
+			SavedActiveInterface = EInterface.Startup;
 		}
 
 		if (LastActiveInterface != ActiveInterface)
@@ -127,6 +136,29 @@ public class Global : MonoBehaviour
 				OverlayGo.SetActive(true);
 				break;
 		}
+	}
+
+	// Update is called once per frame
+	void Update()
+	{
+		--FastFramesCount;
+
+		if (Input.GetMouseButton(0) || Input.touchCount > 0)
+		{
+			Application.targetFrameRate = 20;
+
+			FastFramesCount = 100;
+		}
+		else if (FastFramesCount > 0)
+		{
+			Application.targetFrameRate = 20;
+		}
+		else
+		{
+			Application.targetFrameRate = 7;
+		}
+
+		UpdateInterface();
 	}
 
 	void OnGUI()
@@ -425,7 +457,10 @@ public enum EPool
 	C,
 	D,
 	Max,
-	PostScores
+	PostScoresAC,
+	PostScoresCA,
+	PostScoresBD,
+	PostScoresDB
 }
 
 public class RoutineScoreData

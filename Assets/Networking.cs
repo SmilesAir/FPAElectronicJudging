@@ -289,7 +289,7 @@ public class Networking : MonoBehaviour
 				}
 
 				GetComponent<NetworkView>().RPC("SendCurDataRPC", np, Global.CurDataState, (int)HJudge.CurDivision, (int)HJudge.CurRound,
-					HJudge.GetJudgePool(np.guid), HJudge.GetJudgeTeam(np.guid), HJudge.GetActiveJudgingJudgers(np.guid));
+					(int)HJudge.GetJudgePool(np.guid), HJudge.GetJudgeTeam(np.guid), HJudge.GetActiveJudgingJudgers(np.guid));
 
 				Debug.Log(" send data to judge team: " + HJudge.GetJudgePool(np.guid));
 			}
@@ -556,7 +556,7 @@ public class Networking : MonoBehaviour
 		if (Network.isServer)
 		{
 			HeadJudger HJudge = Global.GetHeadJudger();
-			GetComponent<NetworkView>().RPC("SendCurDataRPC", RPCMode.Others, Global.CurDataState, (int)HJudge.CurDivision, (int)HJudge.CurRound, HJudge.CurPool, HJudge.CurTeam, HJudge.ActiveJudgingJudgers);
+			GetComponent<NetworkView>().RPC("SendCurDataRPC", RPCMode.Others, Global.CurDataState, (int)HJudge.CurDivision, (int)HJudge.CurRound, (int)HJudge.CurPool, HJudge.CurTeam, HJudge.ActiveJudgingJudgers);
 		}
 	}
 
@@ -596,11 +596,42 @@ public class Networking : MonoBehaviour
 			Debug.Log(" got SendCurDataRPC " + Judger.bIsJudging + "  " + Judger.bLockedForJudging + "  " + Judger.bClientReadyToBeLocked +
 				" " + Judger.bHeadJudgeRequestingReady + " " + Judger.bIsEditing + " " + Judger.bRoutineTimeEnded);
 		}
-		if (Judger && !Judger.bIsJudging)
+
+		if (Judger && !Judger.bIsJudging && !Judger.bIsEditing)
 		{
+			EPool newPool = (EPool)InPool;
+			int oldJudgeCategoryIndex = Judger.JudgeCategoryIndex;
+			bool bIsScoresPool = newPool > EPool.Max;
+			bool bIsDiffJudger = Global.ActiveInterface == EInterface.DiffJudger || Global.bOverrideInterfaceAiScores;
+
+			Global.SetOverrideInterfaceAiScores(bIsScoresPool && bIsDiffJudger);
+			Judger = Global.GetActiveJudger();
+			Judger.JudgeCategoryIndex = oldJudgeCategoryIndex;
+			Judger.ResetJudgeNameId();
+
+			if (bIsScoresPool)
+			{
+				if (newPool == EPool.PostScoresAC)
+				{
+					newPool = Global.bOverrideInterfaceAiScores ? EPool.A : EPool.C;
+				}
+				else if (newPool == EPool.PostScoresCA)
+				{
+					newPool = Global.bOverrideInterfaceAiScores ? EPool.C : EPool.A;
+				}
+				else if (newPool == EPool.PostScoresBD)
+				{
+					newPool = Global.bOverrideInterfaceAiScores ? EPool.B : EPool.D;
+				}
+				else
+				{
+					newPool = Global.bOverrideInterfaceAiScores ? EPool.D : EPool.B;
+				}
+			}
+
 			Judger.CurDivision = (EDivision)InDivision;
 			Judger.CurRound = (ERound)InRound;
-			Judger.CurPool = (EPool)InPool;
+			Judger.CurPool = newPool;
 			Judger.CurTeam = InTeam;
 			Judger.WaitingForJudgesCount = InActiveJudgingJudgers;
 

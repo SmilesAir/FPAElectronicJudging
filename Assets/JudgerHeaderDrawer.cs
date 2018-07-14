@@ -62,7 +62,23 @@ public class JudgerHeaderDrawer : MonoBehaviour
         CanvasGO.SetActive(true);
     }
 
-    void OnReadyButtonClick()
+	public void OnEnable()
+	{
+		if (CanvasGO)
+		{
+			CanvasGO.SetActive(true);
+		}
+	}
+
+	public void OnDisable()
+	{
+		if (CanvasGO)
+		{
+			CanvasGO.SetActive(false);
+		}
+	}
+
+	void OnReadyButtonClick()
     {
 		Global.GlobalAudioSource.Stop();
 

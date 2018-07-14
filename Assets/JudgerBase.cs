@@ -35,21 +35,47 @@ public class JudgerBase : InterfaceBase
 	// Use this for initialization
 	public void Start()
 	{
-        HeaderDrawer = GetComponent<JudgerHeaderDrawer>();
+		Global.NetObj.InitUdpListener(false);
+
+        JudgerCanvasUI.SetActive(true);
+	}
+
+	public void OnEnable()
+	{
+		HeaderDrawer = GetComponent<JudgerHeaderDrawer>();
 
 		HeaderDrawer.PressedHoldForReady = PressedHoldForReady;
 		HeaderDrawer.ReleasedHoldForReady = ReleasedHoldForReady;
 		HeaderDrawer.OnFinishedJudging = JudgePressedFinishedJudging;
 		HeaderDrawer.OnRecoverAutosave = RecoverAutosave;
-        HeaderDrawer.OnEditTeamsClick = OnEditTeamButtonClickCallback;
-        HeaderDrawer.OnFinishEditTeamsClick = OnFinishEditTeamButtonClickCallback;
+		HeaderDrawer.OnEditTeamsClick = OnEditTeamButtonClickCallback;
+		HeaderDrawer.OnFinishEditTeamsClick = OnFinishEditTeamButtonClickCallback;
 
-        TeamsDrawer = GetComponent<JudgerTeamsDrawer>();
-        TeamsDrawer.OnTeamButtonClick = OnEditTeamSelected;
+		TeamsDrawer = GetComponent<JudgerTeamsDrawer>();
+		TeamsDrawer.OnTeamButtonClick = OnEditTeamSelected;
 
-		Global.NetObj.InitUdpListener(false);
+		if (JudgerCanvasUI)
+		{
+			JudgerCanvasUI.SetActive(true);
+		}
+	}
 
-        JudgerCanvasUI.SetActive(true);
+	public void OnDisable()
+	{
+		HeaderDrawer.PressedHoldForReady = null;
+		HeaderDrawer.ReleasedHoldForReady = null;
+		HeaderDrawer.OnFinishedJudging = null;
+		HeaderDrawer.OnRecoverAutosave = null;
+		HeaderDrawer.OnEditTeamsClick = null;
+		HeaderDrawer.OnFinishEditTeamsClick = null;
+
+		TeamsDrawer = GetComponent<JudgerTeamsDrawer>();
+		TeamsDrawer.OnTeamButtonClick = null;
+
+		if (JudgerCanvasUI)
+		{
+			JudgerCanvasUI.SetActive(false);
+		}
 	}
 
 	public virtual void RecoverAutosave()
@@ -196,6 +222,11 @@ public class JudgerBase : InterfaceBase
 		return JudgeNameId;
 	}
 
+	public void ResetJudgeNameId()
+	{
+		JudgeNameId = -1;
+	}
+
     public virtual void OnEditTeamSelected(int teamIndex)
     {
         StartEditingTeam(teamIndex);
@@ -214,7 +245,11 @@ public class JudgerBase : InterfaceBase
             return "";
 
         List<TeamDataDisplay> Teams = Global.AllData.AllDivisions[(int)CurDivision].Rounds[(int)CurRound].Pools[(int)CurPool].Teams;
-        if (!bIsEditing)
+		if (CurTeam == -1)
+		{
+			return "No Team Set";
+		}
+		else if (!bIsEditing)
         {
              return Teams[CurTeam].Data.PlayerNames;
         }
