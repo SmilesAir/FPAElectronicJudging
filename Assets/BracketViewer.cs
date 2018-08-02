@@ -66,6 +66,18 @@ public class BracketViewer : MonoBehaviour
 		}
 	}
 
+	private void OnEnable()
+	{
+		Camera cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+		cam.backgroundColor = Color.white;
+	}
+
+	private void OnDisable()
+	{
+		Camera cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+		cam.backgroundColor = new Color(49 / 255f, 77 / 255f, 121/ 255f, 5 / 255f);
+	}
+
 	void ExportScheduleToExcel()
 	{
 		if (CurDivIndex != -1 && CurRoundIndex != -1 && File.Exists(ExcelPath))
@@ -344,8 +356,8 @@ public class BracketViewer : MonoBehaviour
 	{
 		writer.WriteStartElement("ns2:RoundSettings");
 		{
-			writer.WriteElementString("ns2:EventTitle", "FPAW 2017");
-			writer.WriteElementString("ns2:EventSubtitle", "Udine, IT");
+			writer.WriteElementString("ns2:EventTitle", "FPAW 2018");
+			writer.WriteElementString("ns2:EventSubtitle", "Trnava, SK");
 			writer.WriteElementString("ns2:Division", ((EDivision)CurDivIndex).ToString());
 			writer.WriteElementString("ns2:Round", ((ERound)CurRoundIndex).ToString());
 			writer.WriteElementString("ns2:Pool", PoolName);
@@ -685,25 +697,57 @@ public class BracketViewer : MonoBehaviour
 			TeamsScrollPos = GUILayout.BeginScrollView(TeamsScrollPos);
 			GUILayout.BeginVertical();
 
+			GUIStyle labelStyle = new GUIStyle("label");
+			labelStyle.normal.textColor = Color.black;
+
 			if (!bIsEditing)
 			{
 				List<PoolData> Pools = Global.AllData.AllDivisions[CurDivIndex].Rounds[CurRoundIndex].Pools;
 				int PoolIndex = 0;
 				foreach (PoolData pd in Pools)
 				{
-					GUILayout.Label("Pool " + pd.PoolName);
+					GUILayout.Label("Pool " + pd.PoolName, labelStyle);
+
+					// This is a hack to get team result order
+					List<RoutineScoreData> sortedScores = new List<RoutineScoreData>();
+					foreach (TeamDataDisplay tdd in pd.Teams)
+					{
+						if (sortedScores.Count == 0)
+						{
+							sortedScores.Add(tdd.Data.RoutineScores);
+						}
+						else
+						{
+							int insertIndex = 0;
+							foreach (RoutineScoreData score in sortedScores)
+							{
+								if (tdd.Data.RoutineScores.GetTotalPoints() > score.GetTotalPoints())
+								{
+									sortedScores.Insert(insertIndex, tdd.Data.RoutineScores);
+									break;
+								}
+
+								++insertIndex;
+							}
+
+							if (insertIndex == sortedScores.Count)
+							{
+								sortedScores.Insert(insertIndex, tdd.Data.RoutineScores);
+							}
+						}
+					}
 
 					int TeamNum = 0;
 					foreach (TeamDataDisplay tdd in pd.Teams)
 					{
 						++TeamNum;
-						GUILayout.Label(TeamNum + ": " + tdd.Data.PlayerNames + ":");
+						GUILayout.Label(TeamNum + ": " + tdd.Data.PlayerNames + ":", labelStyle);
 
 						for (int ScoresIndex = 0; ScoresIndex < (CurCat == ECategoryView.Overview ? 1 : 3); ++ScoresIndex)
 						{
 							GUIStyle EditStyle = new GUIStyle("button");
 							EditStyle.alignment = TextAnchor.MiddleLeft;
-							string ResultsStr = tdd.Data.RoutineScores.GetResultsString(ScoresIndex, CurCat, true);
+							string ResultsStr = tdd.Data.RoutineScores.GetResultsString(ScoresIndex, CurCat, true, sortedScores);
 							if (ResultsStr.Length > 0)
 							{
 								if (bInEditingMode)
@@ -717,7 +761,7 @@ public class BracketViewer : MonoBehaviour
 									}
 								}
 								else
-									GUILayout.Label("    " + ResultsStr);
+									GUILayout.Label("    " + ResultsStr, labelStyle);
 							}
 							else if (bInEditingMode && (ScoresIndex == 0 || tdd.Data.RoutineScores.GetResultsString(ScoresIndex - 1, CurCat, true).Length > 0))
 							{
@@ -760,7 +804,7 @@ public class BracketViewer : MonoBehaviour
 
 					if (EditAIData.JudgeNameId == -1)
 					{
-						GUILayout.Label("Judge:");
+						GUILayout.Label("Judge:", labelStyle);
 						EditJudgeName = GUILayout.TextField(EditJudgeName);
 
 						char[] Seperators = new char[] {',', ' '};
@@ -778,20 +822,21 @@ public class BracketViewer : MonoBehaviour
 							EditAIData.JudgeNameId = JudgeName.Id;
 					}
 					else
-						GUILayout.Label(NameDatabase.FindInDatabase(EditAIData.JudgeNameId).DisplayName + ": ");
-					GUILayout.Label("V: ");
+						GUILayout.Label(NameDatabase.FindInDatabase(EditAIData.JudgeNameId).DisplayName + ": ", labelStyle);
+
+					GUILayout.Label("V: ", labelStyle);
 					float.TryParse(GUILayout.TextField(EditAIData.Variety.ToString()), out EditAIData.Variety);
-					GUILayout.Label("T: ");
+					GUILayout.Label("T: ", labelStyle);
 					float.TryParse(GUILayout.TextField(EditAIData.Teamwork.ToString()), out EditAIData.Teamwork);
-					GUILayout.Label("M: ");
+					GUILayout.Label("M: ", labelStyle);
 					float.TryParse(GUILayout.TextField(EditAIData.Music.ToString()), out EditAIData.Music);
-					GUILayout.Label("Fm: ");
+					GUILayout.Label("Fm: ", labelStyle);
 					float.TryParse(GUILayout.TextField(EditAIData.Form.ToString()), out EditAIData.Form);
-					GUILayout.Label("Fw: ");
+					GUILayout.Label("Fw: ", labelStyle);
 					float.TryParse(GUILayout.TextField(EditAIData.Flow.ToString()), out EditAIData.Flow);
-                    GUILayout.Label("G: ");
+                    GUILayout.Label("G: ", labelStyle);
                     float.TryParse(GUILayout.TextField(EditAIData.General.ToString()), out EditAIData.General);
-					GUILayout.Label("Total: " + EditAIData.GetTotalPoints().ToString());
+					GUILayout.Label("Total: " + EditAIData.GetTotalPoints().ToString(), labelStyle);
 
 					GUILayout.EndHorizontal();
 				}
@@ -817,7 +862,7 @@ public class BracketViewer : MonoBehaviour
 
 					if (EditExData.JudgeNameId == -1)
 					{
-						GUILayout.Label("Judge:");
+						GUILayout.Label("Judge:", labelStyle);
 						EditJudgeName = GUILayout.TextField(EditJudgeName);
 
 						char[] Seperators = new char[] { ',', ' ' };
@@ -835,16 +880,17 @@ public class BracketViewer : MonoBehaviour
 							EditExData.JudgeNameId = JudgeName.Id;
 					}
 					else
-						GUILayout.Label(NameDatabase.FindInDatabase(EditExData.JudgeNameId).DisplayName + ": ");
-					GUILayout.Label(".1: ");
+						GUILayout.Label(NameDatabase.FindInDatabase(EditExData.JudgeNameId).DisplayName + ": ", labelStyle);
+
+					GUILayout.Label(".1: ", labelStyle);
 					int.TryParse(GUILayout.TextField(EditExData.Point1Count.ToString()), out EditExData.Point1Count);
-					GUILayout.Label(".2: ");
+					GUILayout.Label(".2: ", labelStyle);
 					int.TryParse(GUILayout.TextField(EditExData.Point2Count.ToString()), out EditExData.Point2Count);
-					GUILayout.Label(".3: ");
+					GUILayout.Label(".3: ", labelStyle);
 					int.TryParse(GUILayout.TextField(EditExData.Point3Count.ToString()), out EditExData.Point3Count);
-					GUILayout.Label(".5: ");
+					GUILayout.Label(".5: ", labelStyle);
 					int.TryParse(GUILayout.TextField(EditExData.Point5Count.ToString()), out EditExData.Point5Count);
-					GUILayout.Label("Total: " + EditExData.GetTotalPoints().ToString());
+					GUILayout.Label("Total: " + EditExData.GetTotalPoints().ToString(), labelStyle);
 
 					GUILayout.EndHorizontal();
 				}
@@ -869,7 +915,7 @@ public class BracketViewer : MonoBehaviour
 					GUILayout.BeginVertical();
 
 					GUILayout.BeginHorizontal();
-					GUILayout.Label("Number of Scores: ");
+					GUILayout.Label("Number of Scores: ", labelStyle);
 					int.TryParse(GUILayout.TextField(EditDiffData.NumScores.ToString()), out EditDiffData.NumScores);
 					EditDiffData.NumScores = Mathf.Clamp(EditDiffData.NumScores, 0, 20);
 					GUILayout.EndHorizontal();
@@ -878,7 +924,7 @@ public class BracketViewer : MonoBehaviour
 
 					if (EditDiffData.JudgeNameId == -1)
 					{
-						GUILayout.Label("Judge:");
+						GUILayout.Label("Judge:", labelStyle);
 						EditJudgeName = GUILayout.TextField(EditJudgeName);
 
 						char[] Seperators = new char[] { ',', ' ' };
@@ -896,7 +942,7 @@ public class BracketViewer : MonoBehaviour
 							EditDiffData.JudgeNameId = JudgeName.Id;
 					}
 					else
-						GUILayout.Label(NameDatabase.FindInDatabase(EditDiffData.JudgeNameId).DisplayName + ": ");
+						GUILayout.Label(NameDatabase.FindInDatabase(EditDiffData.JudgeNameId).DisplayName + ": ", labelStyle);
 
 					for (int i = 0; i < EditDiffData.NumScores; ++i)
 					{

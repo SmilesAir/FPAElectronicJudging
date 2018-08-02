@@ -474,6 +474,11 @@ public class RoutineScoreData
 
 	public string GetResultsString(int InResultIndex, ECategoryView InCat, bool bInIncludeName)
 	{
+		return GetResultsString(InResultIndex, InCat, bInIncludeName, null);
+	}
+
+	public string GetResultsString(int InResultIndex, ECategoryView InCat, bool bInIncludeName, List<RoutineScoreData> sortedScores)
+	{
 		switch (InCat)
 		{
 			case ECategoryView.AI:
@@ -525,7 +530,25 @@ public class RoutineScoreData
 					}
 					float TotalPoints = AIPoints + ExPoints + DiffPoints;
 					if (TotalPoints > 0)
-						Ret += "    Total: " + TotalPoints.ToString("0.00");
+					{
+						int resultIndex = 0;
+						if (sortedScores != null)
+						{
+							foreach (RoutineScoreData score in sortedScores)
+							{
+								if (score == this)
+								{
+									break;
+								}
+
+								++resultIndex;
+							}
+						}
+
+						Ret += "    Totals:  Diff: " + DiffPoints.ToString("0.00") + " AI: " + AIPoints.ToString("0.00") + " Ex: " +
+							ExPoints.ToString("0.00") + " All: " + TotalPoints.ToString("0.00") + "   Place: " + (resultIndex + 1);
+					}
+
 					return Ret;
 				}
 		}

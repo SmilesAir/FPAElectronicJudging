@@ -1,6 +1,4 @@
-6 AI judges
-Auto backup copy utility
-Better wildcarding, test for 100 players
+Need to see more backup history
 
 
 control to change bg color for overlay
